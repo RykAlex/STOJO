@@ -1,0 +1,161 @@
+@font-face {
+  font-family: Inter;
+  src: url(/src/assets/static/font/Inter-ExtraBold.woff2);
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inter;
+  src: url(/src/assets/static/font/Inter-Black.woff2);
+  font-weight: 900;
+  font-display: swap;
+  color: $dark-green;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(/src/assets/static/font/Inter-Medium.woff2);
+  font-weight: 500;
+  font-display: swap;
+  color: $middle-green1;
+}
+
+@import "variables-breakpoints";
+
+body {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 170%;
+  color: #777c65;
+}
+
+h1 {
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 122%;
+  color: $dark-green;
+}
+
+h2 {
+  font-family: Inter;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 120%;
+  color: $dark-green;
+}
+
+h3 {
+  font-family: Inter;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 122%;
+  color: $dark-green;
+}
+h4 {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  color: $dark-green;
+}
+h5 {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 122%;
+  color: $dark-green;
+}
+h6 {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 120%;
+  color: $dark-green;
+}
+body {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 170%;
+  color: $dark-green;
+}
+.subtitle {
+  font-family: Inter;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 150%;
+  color: $middle-green1;
+}
+
+.caption {
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 138%;
+  color: $dark-green;
+}
+.btn-text-secondary-arrow {
+  font-family: Inter;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $dark-green;
+}
+.btn-text-primary {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $white;
+}
+
+@media screen and (max-width: $tablet) {
+  body {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 17px;
+  }
+  h5 {
+    font-size: 15px;
+    line-height: 120%;
+  }
+  h5 {
+    font-size: 14px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    line-height: 150%;
+  }
+  body {
+    font-size: 14px;
+    line-height: 170%;
+  }
+  .caption {
+    font-size: 11px;
+    line-height: 120%;
+  }
+  .btn-text {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+}

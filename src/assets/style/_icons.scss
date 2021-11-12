@@ -1,0 +1,38 @@
+.cup-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background: $light-green;
+  position: relative;
+  & svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.dropbtn {
+  width: 88px;
+  height: 48px;
+  border: none;
+  border-radius: 32px;
+  background: $light-green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+.private-icons {
+  width: 88px;
+  height: 48px;
+  border: none;
+  border-radius: 32px;
+  background: $light-green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+@media screen and (max-width: $tablet) {
+}
