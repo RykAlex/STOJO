@@ -19,10 +19,17 @@
 //   }
 // });
 let open = document.querySelectorAll(".dropbtn");
-
+let arrow = document.querySelectorAll(".icon-arrow");
 open.forEach(Fn);
 function Fn(item) {
   item.addEventListener("click", function () {
     this.nextElementSibling.classList.toggle("show");
+
+    arrow.forEach(Fa);
+    function Fa(item) {
+      item.addEventListener("click", function () {
+        this.classList.toggle("active");
+      });
+    }
   });
 }
