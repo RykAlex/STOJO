@@ -6,12 +6,12 @@
         <div class="menu-icon">
           <img src="/src/assets/static/img/button-main-menu.svg" alt="" />
         </div>
-        <div class="menu-mobile">
+        <!-- <div class="menu-mobile">
           <img
             src="/src/assets/static/img/button-main-menu-mobile.svg"
             alt=""
           />
-        </div>
+        </div> -->
         <div class="logo">
           <img src="/src/assets/static/img/logo.png" alt="" />
         </div>
@@ -20,25 +20,21 @@
         </div>
       </div>
       <div class="right-items">
-        <div class="dropdown">
-          <button type="button" class="btn-retail btn-text-secondary-arrow">
-            купить в розницу
-            <svg
-              width="12"
-              height="8"
-              viewBox="0 0 12 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M10.6 0.599976L6 5.19998L1.4 0.599976L0 1.99998L6 7.99998L12 1.99998L10.6 0.599976Z"
-                fill="#242424"
-              />
-            </svg>
+        <div class="dropdown-noauth">
+          <button class="btn-retail btn-text-secondary-arrow">
+            <div class="no-auth-items">
+              <div class="btn-text">купить в розницу</div>
+
+              <div class="auth-arrow">
+                <img
+                  class="down"
+                  src="/src/assets/static/img/down-icon.svg"
+                  alt=""
+                />
+              </div>
+            </div>
           </button>
-          <div class="submenu">
+          <div id="authBtn" class="submenu">
             <div class="submenu-items">
               <div class="submenu-icon">
                 <img src="/src/assets/static/img/ozon.png" alt="" />
@@ -67,18 +63,124 @@
         </button>
       </div>
     </div>
+    <!-- Menu no auth -->
+    <div id="menuNoAuth" class="menu-noauth">
+      <div class="menu-wrapper">
+        <div class="menu-noauth-items">
+          <div class="noauth-items">
+            <div class="menu-items-title">Каталог</div>
+            <a href=""
+              ><div class="menu-items">
+                <div class="menu-pic">
+                  <img src="/src/assets/static/img/menu-kruzhki.png" alt="" />
+                </div>
+                <div class="menu-text">Кружки STOJO</div>
+              </div></a
+            >
+            <a href=""
+              ><div class="menu-items">
+                <div class="menu-pic">
+                  <img src="/src/assets/static/img/menu-bottle.png" alt="" />
+                </div>
+                <div class="menu-text">Бутылки STOJO</div>
+              </div></a
+            >
+           <a href=""> <div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/menu-plates.png" alt="" />
+              </div>
+              <div class="menu-text">Ланч бокс STOJO</div>
+            </div></a>
+            <a href=""
+              ><div class="menu-items">
+                <div class="menu-pic">
+                  <img
+                    src="/src/assets/static/img/menu-dispensers.png"
+                    alt=""
+                  />
+                </div>
+                <div class="menu-text">Диспенсеры STOJO</div>
+              </div>
+          </div></a>
+          <div class="noauth-items">
+            <div class="menu-items-title">Информация</div>
+            <a href=""><div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/icon-company.png" alt="" />
+              </div>
+              <div class="menu-text">О компании</div>
+            </div></a>
+            <a href=""><div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/icon-corp.png" alt="" />
+              </div>
+              <div class="menu-text">Корп.клиентам</div>
+            </div></a>
+            <a href=""><div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/icon-logo.png" alt="" />
+              </div>
+              <div class="menu-text">Нанесение логотипа</div>
+            </div></a>
+            <a href=""><div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/delivery.png" alt="" />
+              </div>
+              <div class="menu-text">Оплата и доставка</div>
+            </div></a>
+            <a href=""><div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/contacts.png" alt="" />
+              </div>
+              <div class="menu-text">Контакты</div>
+            </div></a>
+          </div>
+          <div class="noauth-items">
+            <div class="menu-items-title">Кабинет</div>
+            <a href=""><div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/icon-lock.png" alt="" />
+              </div>
+              <div class="menu-text">Войти</div>
+            </div></a>
+            </div>
+            <div class="noauth-items">
+              <div class="menu-items-title">Купить в розницу</div>
+              <a href=""><div class="menu-items">
+                <div class="menu-pic">
+                  <img src="/src/assets/static/img/ozon.png" alt="" />
+                </div>
+                <div class="menu-text">На ozon.ru</div>
+              </div></a>
+              <a href=""><div class="menu-items">
+                <div class="menu-pic">
+                  <img src="/src/assets/static/img/wildberries.png" alt="" />
+                </div>
+                <div class="menu-text">На wildberries.ru</div>
+              </div></a>
+              <a href=""><div class="menu-items">
+                <div class="menu-pic">
+                  <img src="/src/assets/static/img/yandex.png" alt="" />
+                </div>
+                <div class="menu-text">На Яндекс.Маркет</div>
+              </div></a>
+              </div>
+        </div>
+      </div>
+    </div>
+    
     <!---Header auth -->
     <div class="header-items-auth">
       <div class="left-items">
         <div class="menu-icon">
           <img src="/src/assets/static/img/button-main-menu.svg" alt="" />
         </div>
-        <div class="menu-mobile">
+        <!-- <div class="menu-mobile">
           <img
             src="/src/assets/static/img/button-main-menu-mobile.svg"
             alt=""
           />
-        </div>
+        </div> -->
         <div class="logo">
           <img src="/src/assets/static/img/logo.png" alt="" />
         </div>
@@ -155,7 +257,7 @@
           <button class="dropbtn">
             <div class="icon-items">
               <div class="icon-pic">
-                <img src="/src/assets/static/img/icon-user.png" alt="" />
+                <img src="/src/assets/static/img/user.svg" alt="" />
               </div>
               <div class="icon-arrow">
                 <img
@@ -175,25 +277,22 @@
             >
             <a href=""
               ><img
-                src="/src/assets/static/img/icon-logo.png"
+                src="/src/assets/static/img/icon-order-profiles.png"
                 alt=""
-              />Корп.клиентам</a
+              />Профили заказов</a
+            >
+            <a href=""
+              ><img src="/src/assets/static/img/icon-user.png" alt="" />Личные
+              данные</a
             >
             <a href=""
               ><img
-                src="/src/assets/static/img/icon-corp.png"
+                src="/src/assets/static/img/icon-subscribe.png"
                 alt=""
-              />Нанесение логотипа</a
+              />Подписки</a
             >
             <a href=""
-              ><img src="/src/assets/static/img/delivery.png" alt="" />Оплата и
-              доставка</a
-            >
-            <a href=""
-              ><img
-                src="/src/assets/static/img/contacts.png"
-                alt=""
-              />Контакты</a
+              ><img src="/src/assets/static/img/icon-exit.png" alt="" />Выйти</a
             >
           </div>
         </div>
@@ -213,6 +312,136 @@
             />
           </svg>
         </button>
+      </div>
+    </div>
+    <!-- Menu auth -->
+    <div id="menuAuth" class="menu-auth">
+      <div class="menu-wrapper">
+        <div class="menu-noauth-items">
+          <div class="noauth-items">
+            <div class="menu-items-title">Каталог</div>
+            <a href=""
+              ><div class="menu-items">
+                <div class="menu-pic">
+                  <img src="/src/assets/static/img/menu-kruzhki.png" alt="" />
+                </div>
+                <div class="menu-text">Кружки STOJO</div>
+              </div></a
+            >
+            <a href=""
+              ><div class="menu-items">
+                <div class="menu-pic">
+                  <img src="/src/assets/static/img/menu-bottle.png" alt="" />
+                </div>
+                <div class="menu-text">Бутылки STOJO</div>
+              </div></a
+            >
+           <a href=""> <div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/menu-plates.png" alt="" />
+              </div>
+              <div class="menu-text">Ланч бокс STOJO</div>
+            </div></a>
+            <a href=""
+              ><div class="menu-items">
+                <div class="menu-pic">
+                  <img
+                    src="/src/assets/static/img/menu-dispensers.png"
+                    alt=""
+                  />
+                </div>
+                <div class="menu-text">Диспенсеры STOJO</div>
+              </div>
+          </div></a>
+          <div class="noauth-items">
+            <div class="menu-items-title">Кабинет</div>
+            <a href=""><div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/icon-orders.png" alt="" />
+              </div>
+              <div class="menu-text">Заказы</div>
+            </div></a>
+            <a href=""><div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/icon-order-profiles.png" alt="" />
+              </div>
+              <div class="menu-text">Профили заказов</div>
+            </div></a>
+            <a href=""><div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/icon-user.png" alt="" />
+              </div>
+              <div class="menu-text">Личные данные</div>
+            </div></a>
+            <a href=""><div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/icon-subscribe.png" alt="" />
+              </div>
+              <div class="menu-text">Подписки</div>
+            </div></a>
+            <a href=""><div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/icon-exit.png" alt="" />
+              </div>
+              <div class="menu-text">Выйти</div>
+            </div></a>
+            </div>
+          <div class="noauth-items">
+            <div class="menu-items-title">Информация</div>
+            <a href=""><div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/icon-company.png" alt="" />
+              </div>
+              <div class="menu-text">О компании</div>
+            </div></a>
+            <a href=""><div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/icon-corp.png" alt="" />
+              </div>
+              <div class="menu-text">Корп.клиентам</div>
+            </div></a>
+            <a href=""><div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/icon-logo.png" alt="" />
+              </div>
+              <div class="menu-text">Нанесение логотипа</div>
+            </div></a>
+            <a href=""><div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/delivery.png" alt="" />
+              </div>
+              <div class="menu-text">Оплата и доставка</div>
+            </div></a>
+            <a href=""><div class="menu-items">
+              <div class="menu-pic">
+                <img src="/src/assets/static/img/contacts.png" alt="" />
+              </div>
+              <div class="menu-text">Контакты</div>
+            </div></a>
+          </div>
+
+            <div class="noauth-items">
+              <div class="menu-items-title">Купить в розницу</div>
+              <a href=""><div class="menu-items">
+                <div class="menu-pic">
+                  <img src="/src/assets/static/img/ozon.png" alt="" />
+                </div>
+                <div class="menu-text">На ozon.ru</div>
+              </div></a>
+              <a href=""><div class="menu-items">
+                <div class="menu-pic">
+                  <img src="/src/assets/static/img/wildberries.png" alt="" />
+                </div>
+                <div class="menu-text">На wildberries.ru</div>
+              </div></a>
+              <a href=""><div class="menu-items">
+                <div class="menu-pic">
+                  <img src="/src/assets/static/img/yandex.png" alt="" />
+                </div>
+                <div class="menu-text">На Яндекс.Маркет</div>
+              </div></a>
+              </div>
+        </div>
       </div>
     </div>
   </div>

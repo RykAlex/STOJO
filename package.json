@@ -42,5 +42,8 @@
 		"vinyl-buffer": "^1.0.1",
 		"vinyl-source-stream": "^2.0.0",
 		"yargs": "^17.2.1"
+	},
+	"dependencies": {
+		"simplebar": "^5.3.6"
 	}
 }
