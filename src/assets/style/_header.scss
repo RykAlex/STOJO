@@ -190,6 +190,7 @@ input {
 }
 .btn-primary-icon.btn-text-primary.mobile {
   display: none;
+  margin-left: 22px;
   padding: 14.5px 17px 14.5px 58px;
   white-space: nowrap;
   align-items: center;
@@ -199,11 +200,18 @@ input {
 
 .account-count {
   position: absolute;
-  position: absolute;
   top: 50%;
-  left: 20%;
-  transform: translate(-50%, -20%);
+  left: 17%;
+  transform: translate(-50%, -50%);
+  color: $black;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: $white;
+  line-height: 29px;
 }
+
 @media screen and (max-width: $tablet) {
   .right-items,
   .logo {
