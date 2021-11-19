@@ -1,13 +1,13 @@
 .menu-wrapper {
-  padding-left: 22px;
   width: 248px;
+  position: relative;
 }
 .menu-noauth {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 100%;
+  height: 740px;
   width: 0;
   position: fixed;
   z-index: 1;
@@ -16,32 +16,38 @@
   background-color: #fff;
   overflow-x: hidden;
 
-  margin-top: 88px;
+  margin-top: 30px;
   transition: margin-left 0.5s;
   transition: width;
+  position: relative;
 }
-
+.close-menu {
+  display: none;
+}
 .menu-auth {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 100%;
+  height: 900px;
   width: 0;
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   top: 0;
   left: 0;
   background-color: #fff;
-  overflow-x: hidden;
+  overflow: auto;
 
-  margin-top: 88px;
+  margin-top: 30px;
   transition: margin-left 0.5s;
   transition: width;
+  position: relative;
+  overflow: auto;
 }
 
 .show {
   display: flex;
+  flex-direction: column;
   width: 280px;
   transition: ease all 0.5s;
 }
@@ -70,27 +76,25 @@
 }
 .menu-items-title {
   margin-bottom: 5px;
-}
-.menu-items {
-  display: flex;
-  align-items: center;
-
-  margin-bottom: 13px;
-  &:last-child {
-    margin-bottom: 0;
-  }
+  padding-left: 15px;
 }
 .menu-items {
   display: flex;
   align-items: center;
   height: 40px;
   padding-left: 10px;
+  margin-bottom: 13px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
+
 a.menu-items:hover {
   background-color: $light-green;
 }
 .menu-pic {
   margin-right: 14px;
+  padding-left: 5px;
   height: 20px;
   width: 20px;
   position: relative;
@@ -108,12 +112,44 @@ a.menu-items:hover {
 .noauth-info {
   margin-top: 32px;
 }
+.simplebar-scrollbar:before {
+  position: absolute;
+  content: "";
+  background: #777c65;
+  border-radius: 0;
+  width: 2px;
+  left: 2px;
+  right: 2px;
+  opacity: 1;
+  transition: opacity 0.2s linear;
+}
 
 @media screen and (max-width: $tablet) {
   .show {
     width: 100%;
   }
+  .header-items-no-auth {
+    position: fixed;
+    top: 0;
+  }
+
+  .menu-noauth {
+    margin-top: 65px;
+    height: calc(100% - 60px);
+    overflow: auto;
+  }
+  .menu-auth {
+    margin-top: 20px;
+    height: calc(100% - 60px);
+    overflow: auto;
+  }
 }
 
 @media screen and (max-width: $mobile) {
+  .close-menu {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }

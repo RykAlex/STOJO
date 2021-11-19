@@ -30,7 +30,11 @@ let menuAuth = document.querySelector(".menu-auth");
 openMenu.addEventListener("click", function () {
   menuNoAuth.classList.toggle("show");
 });
-
+let closeMenu = document.querySelector(".menu-noauth .close-menu");
+closeMenu.addEventListener("click", function () {
+  let navModal = document.querySelector(".menu-noauth");
+  navModal.classList.remove("show");
+});
 openMenuAuth.addEventListener("click", function () {
   menuAuth.classList.toggle("show");
 });

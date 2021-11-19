@@ -1,5 +1,5 @@
 .header-items-no-auth {
-  display: flex;
+  display: none;
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -89,7 +89,7 @@ a:hover {
 /*Header-auth
 =================*/
 .header-items-auth {
-  display: none;
+  display: flex;
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -188,7 +188,22 @@ input {
   display: inline-block;
   margin-right: 16px;
 }
+.btn-primary-icon.btn-text-primary.mobile {
+  display: none;
+  padding: 14.5px 17px 14.5px 58px;
+  white-space: nowrap;
+  align-items: center;
+  font-size: 11px;
+  position: relative;
+}
 
+.account-count {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -20%);
+}
 @media screen and (max-width: $tablet) {
   .right-items,
   .logo {
@@ -198,9 +213,11 @@ input {
     margin-top: 12px;
     margin-bottom: 12px;
   }
+
   .menu-mobile,
   .logo-mobile {
     display: flex;
+    z-index: 1000;
   }
   .menu-icon {
     margin-right: 16px;
@@ -210,6 +227,14 @@ input {
   }
   .search-compact {
     display: none;
+  }
+  .btn-primary-icon.btn-text-primary.mobile {
+    display: flex;
+  }
+  .account-count {
+    width: 29px;
+    height: 29px;
+    border-radius: 14.5px;
   }
 }
 

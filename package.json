@@ -44,6 +44,7 @@
 		"yargs": "^17.2.1"
 	},
 	"dependencies": {
+		"setup": "^0.0.3",
 		"simplebar": "^5.3.6"
 	}
 }

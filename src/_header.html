@@ -1,7 +1,7 @@
 <header>
   <div class="container">
     <!---Header no-auth -->
-    <div class="header-items-no-auth">
+    <div class="header-items-no-auth"  >
       <div class="left-items">
         <div class="menu-icon">
           <img src="/src/assets/static/img/button-main-menu.svg" alt="" />
@@ -64,10 +64,15 @@
       </div>
     </div>
     <!-- Menu no auth -->
-    <div id="menuNoAuth" class="menu-noauth">
+   
+    <div id="menuNoAuth" data-simplebar class="menu-noauth">
+      <div class="close-menu">
+        <img src="/src/assets/static/img/close-menu.svg" alt="">
+      </div>
       <div class="menu-wrapper">
         <div class="menu-noauth-items">
           <div class="noauth-items">
+
             <div class="menu-items-title">Каталог</div>
             <a href=""
               ><div class="menu-items">
@@ -75,8 +80,7 @@
                   <img src="/src/assets/static/img/menu-kruzhki.png" alt="" />
                 </div>
                 <div class="menu-text">Кружки STOJO</div>
-              </div></a
-            >
+              </div></a>
             <a href=""
               ><div class="menu-items">
                 <div class="menu-pic">
@@ -191,6 +195,13 @@
           <input type="search" name="" id="" />
           <img src="/src/assets/static/img/icon-search.svg" alt="" />
         </div>
+        <button type="button" class="btn-primary-icon btn-text-primary mobile">
+         
+            <div class="account-count white">15</div>
+            28 989 Р
+          </div>
+     
+        </button>
       </div>
       <div class="right-items">
         <div class="cup-icon">
@@ -312,10 +323,11 @@
             />
           </svg>
         </button>
+
       </div>
     </div>
     <!-- Menu auth -->
-    <div id="menuAuth" class="menu-auth">
+    <div id="menuAuth" data-simplebar class="menu-auth">
       <div class="menu-wrapper">
         <div class="menu-noauth-items">
           <div class="noauth-items">
