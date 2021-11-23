@@ -1,47 +1,46 @@
-.menu-wrapper {
-  width: 248px;
-  position: relative;
-}
 .menu-noauth {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   height: 740px;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   top: 0;
   left: 0;
   background-color: #fff;
   overflow-x: hidden;
+  position: absolute;
 
-  margin-top: 30px;
+  margin-top: 67px;
   transition: margin-left 0.5s;
   transition: width;
+}
+.menu-wrapper {
+  width: 248px;
   position: relative;
 }
 .close-menu {
   display: none;
 }
 .menu-auth {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   height: 900px;
   width: 0;
-  position: fixed;
-  z-index: 1;
+  position: absolute;
+  z-index: 1000;
   top: 0;
   left: 0;
   background-color: #fff;
-  overflow: auto;
 
-  margin-top: 30px;
+  margin-top: 67px;
   transition: margin-left 0.5s;
   transition: width;
-  position: relative;
+
   overflow: auto;
 }
 
@@ -123,33 +122,44 @@ a.menu-items:hover {
   opacity: 1;
   transition: opacity 0.2s linear;
 }
-
+.close-menu-auth {
+  display: none;
+}
 @media screen and (max-width: $tablet) {
   .show {
     width: 100%;
   }
   .header-items-no-auth {
-    position: fixed;
     top: 0;
   }
 
   .menu-noauth {
-    margin-top: 65px;
+    margin-top: 61px;
     height: calc(100% - 60px);
     overflow: auto;
+    z-index: 1000;
+    position: fixed;
   }
   .menu-auth {
     margin-top: 20px;
     height: calc(100% - 60px);
     overflow: auto;
+    z-index: 1000;
+    position: fixed;
   }
-}
-
-@media screen and (max-width: $mobile) {
   .close-menu {
     display: flex;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 25px;
   }
+  .close-menu-auth {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
 }

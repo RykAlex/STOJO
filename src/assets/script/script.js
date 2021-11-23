@@ -38,7 +38,14 @@ closeMenu.addEventListener("click", function () {
 openMenuAuth.addEventListener("click", function () {
   menuAuth.classList.toggle("show");
 });
-
+let closeMenuAuth = document.querySelector(".menu-auth .close-menu-auth");
+closeMenuAuth.addEventListener("click", function () {
+  let navModalAuth = document.querySelector(".menu-auth");
+  navModalAuth.classList.remove("show");
+});
+openMenuAuth.addEventListener("click", function () {
+  menuAuthD.classList.toggle("show");
+});
 // menuMobile.addEventListener("click", function () {
 //   menuNoAuth.classList.toggle("show");
 // });

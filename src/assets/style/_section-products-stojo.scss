@@ -1,0 +1,120 @@
+.products-stojo {
+  margin-top: 56px;
+  background: $light-green;
+  min-height: 440px;
+  height: 100%;
+}
+.section-title {
+  color: $dark-grey;
+  padding-top: 63px;
+  margin-bottom: 16px;
+}
+.stojo-text {
+  max-width: 538px;
+  width: 100%;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 150%;
+  color: $dark-grey;
+  margin-bottom: 32px;
+}
+.tag {
+  padding: 24px 40px;
+  background: $white;
+  display: inline-flex;
+  border-radius: 55px;
+  color: $black;
+  margin-right: 16px;
+  margin-bottom: 16px;
+
+  &.text {
+    padding: 18px 24px;
+    font-family: Inter;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $black;
+  }
+}
+.tag:last-child {
+  margin-right: 0;
+}
+.section-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.section-left {
+  width: 50%;
+}
+.section-right {
+  width: 646px;
+  position: absolute;
+  top: 17px;
+  right: 100px;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+@media screen and (max-width: $tablet) {
+  .section-wrapper {
+    flex-direction: column;
+  }
+  .products-stojo {
+    margin-top: 20px;
+    background: $light-green;
+    min-height: 504px;
+    height: 100%;
+  }
+  .section-title {
+    padding-top: 24px;
+    font-size: 24px;
+  }
+  .stojo-text {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+  .section-left {
+    width: 100%;
+  }
+  .section-right {
+    min-width: 260px;
+    width: 100px;
+    position: absolute;
+    top: 329px;
+    right: 0;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .tag {
+    padding: 24px 40px;
+    background: $white;
+    display: inline-flex;
+    border-radius: 55px;
+    color: $black;
+    margin-right: 8px;
+    margin-bottom: 8px;
+
+    &.text {
+      padding: 14.5px 17.5px;
+      font-family: Inter;
+      font-weight: 800;
+      font-size: 11px;
+      line-height: 100%;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $black;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+}
