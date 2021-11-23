@@ -1,0 +1,124 @@
+.bottles {
+  margin-top: 136px;
+  margin-bottom: 64px;
+}
+
+.bottles-title {
+  color: $dark-grey;
+  margin-bottom: 32px;
+}
+.bottles-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 16px;
+  row-gap: 16px;
+}
+.bottles-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $light-green;
+  border-radius: 16px;
+  @extend h5;
+  color: $dark-grey;
+}
+
+.bottles-colors {
+  margin-bottom: 40px;
+  @extend body;
+  color: $dark-green;
+}
+
+.bottles-img {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 194px;
+  height: 240px;
+  a {
+    display: flex;
+    width: 100%;
+    :hover {
+      cursor: default;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.bottles-name {
+  margin-bottom: 5px;
+}
+.bottles-img a img {
+  transition: all 0.3s ease;
+}
+
+.bottles a:hover img {
+  opacity: 0;
+}
+
+.bottles a:hover {
+  background: url(/src/assets/static/img/bottles-close.png) no-repeat 50% 50%;
+}
+@media screen and (max-width: $tablet) {
+  .bottles {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .bottles-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 8px;
+    row-gap: 8px;
+  }
+  .bottles-wrapper > div:nth-child(1) {
+    grid-column: 1 / -1;
+    .bottles-img {
+      width: 160px;
+      height: 197px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .bottles-items {
+    border-radius: 8px;
+    @extend h5;
+    color: $dark-grey;
+    font-size: 15px;
+    line-height: 120%;
+  }
+
+  .bottles-colors {
+    margin-bottom: 40px;
+    @extend body;
+    color: $dark-green;
+  }
+
+  .bottles-img {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 95px;
+    height: 117px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .bottles-name {
+    margin-bottom: 5px;
+  }
+  .bottles-colors {
+    margin-bottom: 18px;
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+}
