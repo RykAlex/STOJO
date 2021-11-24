@@ -4,7 +4,6 @@
 
 .about-us-items {
   display: flex;
-  align-items: flex-start;
 }
 .about-us-img {
   width: 564px;
@@ -17,13 +16,13 @@
   }
 }
 .about-us-all {
-  max-width: 532px;
-  width: 100%;
+  min-width: 532px;
+
   color: $dark-grey;
 }
 .about-us-title {
   @extend h5;
-
+  color: $dark-grey;
   font-size: 30px;
   line-height: 120%;
   margin-bottom: 16px;
@@ -34,8 +33,29 @@
   margin-bottom: 24px;
 }
 .about-us-subtext {
+  font-family: Inter;
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 160%;
+  color: $dark-grey;
+  a {
+    display: inline-flex;
+
+    border-bottom: 1px solid $dark-grey;
+    color: $dark-grey;
+
+    &:hover {
+      border-bottom: 1px solid transparent;
+      cursor: default;
+      background: none;
+    }
+  }
 }
 @media screen and (max-width: $tablet) {
+  .about-us {
+    margin-bottom: 40px;
+  }
   .about-us-items {
     display: flex;
     flex-direction: column-reverse;
@@ -58,6 +78,13 @@
   }
   .about-us-all {
     margin-bottom: 24px;
+  }
+  .about-us-title {
+    color: $black;
+    font-size: 20px;
+  }
+  .about-us-subtext {
+    font-size: 14px;
   }
 }
 
