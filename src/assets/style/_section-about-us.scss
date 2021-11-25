@@ -16,7 +16,7 @@
   }
 }
 .about-us-all {
-  min-width: 532px;
+  max-width: 532px;
 
   color: $dark-grey;
 }
@@ -61,11 +61,6 @@
     flex-direction: column-reverse;
     justify-content: center;
   }
-  .about-us-all {
-    min-width: 287px;
-    width: 100%;
-    color: $dark-grey;
-  }
   .about-us-img {
     width: 287px;
     height: 305px;
@@ -76,6 +71,12 @@
       object-fit: cover;
     }
   }
+  .about-us-all {
+    min-width: 287px;
+    width: 100%;
+    color: $dark-grey;
+  }
+
   .about-us-all {
     margin-bottom: 24px;
   }

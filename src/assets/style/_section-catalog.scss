@@ -1,5 +1,5 @@
 .catalog {
-  margin-bottom: 4040;
+  margin-bottom: 40px;
 }
 .catalog-title {
   @extend h2;
@@ -7,21 +7,23 @@
   margin-bottom: 40px;
 }
 .catalog-wrapper {
-  margin-bottom: 18px;
-}
-.stojo-items {
-  position: relative;
-  &:hover {
-    cursor: default;
-  }
-}
-.catalog-stojo {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 15px;
   row-gap: 16px;
+  margin-bottom: 18px;
 }
-.stojo-img {
+.stojo-items {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &:hover {
+    cursor: default;
+  }
+}
+
+.catalogs-img {
   width: 289px;
   height: 420px;
   img {
@@ -31,12 +33,15 @@
   }
 }
 .catalog-group {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  text-align: center;
 }
 .stojo-title {
   @extend h2;
@@ -83,38 +88,56 @@
   margin-bottom: 40px;
 }
 .all-stojo {
-  max-width: 895px;
-  width: 100%;
+  width: 895px;
 
   padding: 27px;
   text-align: center;
   border-radius: 16px;
   background-color: $light-green;
+  &:hover {
+    box-shadow: inset 0px 0px 160px rgba(0, 0, 0, 0.07);
+  }
 }
 .all-jolli {
-  max-width: 289px;
-  width: 100%;
+  width: 289px;
 
   text-align: center;
   border-radius: 16px;
   padding: 27px;
-
   background-color: $light-green;
+  &:hover {
+    box-shadow: inset 0px 0px 160px rgba(0, 0, 0, 0.07);
+    cursor: default;
+  }
 }
 @media screen and (max-width: $tablet) {
-  .catalog-stojo {
-    display: grid;
+  .catalog-wrapper {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 8px;
     row-gap: 8px;
   }
   .stojo-title {
-    margin-bottom: 143px;
+    margin-bottom: 120px;
   }
   button {
     display: none;
   }
-  .stojo-img {
+
+  .all-stojo {
+    margin-bottom: 8px;
+  }
+  .catalog-all {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .catalog-wrapper {
+    margin-bottom: 8px;
+  }
+  .catalog-title {
+    margin-bottom: 24px;
+  }
+  .catalogs-img {
     width: 140px;
     height: 203px;
     img {
@@ -122,13 +145,6 @@
       height: 100%;
       object-fit: cover;
     }
-  }
-  .all-stojo {
-    margin-bottom: 8px;
-  }
-  .catalog-all {
-    flex-direction: column;
-    margin-bottom: 40px;
   }
   .all-stojo {
     min-width: 287px;
@@ -145,12 +161,6 @@
     border-radius: 8px;
     padding: 19px;
     background-color: $light-green;
-  }
-  .catalog-wrapper {
-    margin-bottom: 8px;
-  }
-  .catalog-title {
-    margin-bottom: 24px;
   }
 }
 
