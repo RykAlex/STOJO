@@ -18,6 +18,22 @@ window.addEventListener("click", function (event) {
     }
   }
 });
+let openBtnF = document.querySelector(".footer-right-items .btn-retail");
+let arrowBtnF = document.querySelector(".auth-arrow-footer");
+
+openBtnF.addEventListener("click", function () {
+  document.getElementById("authBtnF").classList.toggle("show");
+  arrowBtnF.classList.toggle("active");
+});
+window.addEventListener("click", function (event) {
+  if (!event.target.matches(".footer-right-items .btn-retail")) {
+    let openDropdownF = document.querySelector(".submenu");
+    if (openDropdownF.classList.contains("show")) {
+      openDropdownF.classList.remove("show");
+      arrowBtnF.classList.remove("active");
+    }
+  }
+});
 
 // Скрипт для Menu
 // ============================================
@@ -81,6 +97,28 @@ function Fn(item) {
       if (element.classList.contains("icon-arrow")) {
         element.classList.toggle("active");
       }
+    }
+  });
+}
+// Accordion
+// ===========================================
+let acc = document.getElementsByClassName("accordion");
+let i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+
+    let panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
 }

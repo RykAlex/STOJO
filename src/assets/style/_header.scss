@@ -4,6 +4,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 .left-items {
   position: relative;
 }
@@ -210,7 +211,9 @@ input {
   background-color: $white;
   line-height: 29px;
 }
-
+.footer-buy {
+  display: flex;
+}
 @media screen and (max-width: $tablet) {
   .right-items,
   .logo {
