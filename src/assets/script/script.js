@@ -6,30 +6,33 @@ let openBtn = document.querySelector(".btn-retail");
 let arrowBtn = document.querySelector(".auth-arrow");
 
 openBtn.addEventListener("click", function () {
-  document.getElementById("authBtn").classList.toggle("show");
+  document.getElementById("authBtn").classList.toggle("showH");
   arrowBtn.classList.toggle("active");
 });
 window.addEventListener("click", function (event) {
   if (!event.target.matches(".btn-retail")) {
     let openDropdown = document.querySelector(".submenu");
-    if (openDropdown.classList.contains("show")) {
-      openDropdown.classList.remove("show");
+    if (openDropdown.classList.contains("showH")) {
+      openDropdown.classList.remove("showH");
       arrowBtn.classList.remove("active");
     }
   }
 });
-let openBtnF = document.querySelector(".footer-right-items .btn-retail");
+
+let openBtnF = document.querySelector(
+  ".footer-right-items .btn-retail .footer"
+);
 let arrowBtnF = document.querySelector(".auth-arrow-footer");
 
 openBtnF.addEventListener("click", function () {
-  document.getElementById("authBtnF").classList.toggle("show");
+  document.getElementById("authBtnF").classList.toggle("showF");
   arrowBtnF.classList.toggle("active");
 });
 window.addEventListener("click", function (event) {
-  if (!event.target.matches(".footer-right-items .btn-retail")) {
-    let openDropdownF = document.querySelector(".submenu");
-    if (openDropdownF.classList.contains("show")) {
-      openDropdownF.classList.remove("show");
+  if (!event.target.matches(".footer-right-items .btn-retail .footer")) {
+    let openDropdownF = document.querySelector(".submenuF");
+    if (openDropdownF.classList.contains("showF")) {
+      openDropdownF.classList.remove("showF");
       arrowBtnF.classList.remove("active");
     }
   }
