@@ -19,6 +19,7 @@
   align-items: center;
   background: $light-green;
   border-radius: 16px;
+  position: relative;
   @extend h5;
   color: $dark-grey;
 }
@@ -34,6 +35,7 @@
   margin-bottom: 32px;
   width: 194px;
   height: 240px;
+
   a {
     display: flex;
     width: 100%;
@@ -46,6 +48,23 @@
       object-fit: cover;
     }
   }
+}
+.soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  top: 39%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  background: #777c65;
+  opacity: 0.5;
+  color: $white;
+  font-size: 15px;
 }
 .bottles-name {
   margin-bottom: 5px;
@@ -60,6 +79,7 @@
 
 .bottles a:hover {
   background: url(/src/assets/static/img/bottles-close.png) no-repeat 50% 50%;
+  background-size: cover;
 }
 @media screen and (max-width: $tablet) {
   .bottles {
@@ -110,7 +130,13 @@
       object-fit: contain;
     }
   }
-
+  .soon {
+    border-radius: 32px;
+    width: 64px;
+    height: 64px;
+    top: 33%;
+    font-size: 14px;
+  }
   .bottles-name {
     margin-bottom: 5px;
   }

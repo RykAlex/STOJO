@@ -93,6 +93,10 @@
       object-fit: contain;
     }
   }
+  .cups-img a:hover {
+    background: url(/src/assets/static/img/cups355.png) no-repeat 50% 50%;
+    background-size: cover;
+  }
   .cups-name {
     margin-bottom: 5px;
   }
