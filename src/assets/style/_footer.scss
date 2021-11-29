@@ -1,7 +1,6 @@
 .footer-items-noauth {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 43px;
 }
 .footer-menu {
   display: flex;
@@ -138,6 +137,7 @@ footer.mobile {
   }
   footer.mobile {
     display: flex;
+    flex-direction: column;
   }
   .footer-items-noauth {
     flex-direction: column;
@@ -155,7 +155,19 @@ footer.mobile {
     transition: 0.4s;
     position: relative;
   }
+  .accordion.footer-menu-title {
+    padding-top: 15px;
+    border-top: 1px solid #f9faea;
+    &:last-of-type {
+      padding-bottom: 15px;
+      border-bottom: 1px solid #f9faea;
+    }
+  }
 
+  .accordion.footer-menu-title:last-of-type.show.active {
+    padding-bottom: 15px;
+    border-bottom: 1px solid transparent;
+  }
   .active,
   .accordion:hover {
     background-color: $white;
@@ -164,7 +176,7 @@ footer.mobile {
     content: "";
     position: absolute;
     right: 0;
-    top: 0;
+    top: 17px;
     width: 16px;
     height: 16px;
     background-image: url("/src/assets/static/img/icon-expand-more.svg");
@@ -174,7 +186,7 @@ footer.mobile {
     content: "";
     position: absolute;
     right: 0;
-    top: 0;
+    top: 17px;
     width: 16px;
     height: 16px;
     background-image: url("/src/assets/static/img/icon-expand-less.png");
@@ -184,9 +196,16 @@ footer.mobile {
     display: none;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+
+    border-bottom: 1px solid #f9faea;
   }
+
   a.item-link {
     color: $dark-green;
+  }
+  .copyright {
+    margin-top: 27px;
+    margin-bottom: 103px;
   }
   .copyright-items {
     flex-direction: column;
@@ -220,10 +239,13 @@ footer.mobile {
     flex-direction: column;
     align-items: center;
   }
-
+  .box-shadow {
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.07);
+  }
   .footer-right-items {
     display: flex;
     justify-content: center;
+    margin: 16px 0;
   }
   .btn-retail.btn-text-secondary-arrow.footer {
     margin-right: 10px;
@@ -255,31 +277,26 @@ footer.mobile {
   .auth-arrow-footer {
     display: flex;
     align-items: center;
-    width: 12px;
-    height: 12px;
+
     position: relative;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   }
   .auth-arrow-footer:after {
     content: "";
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 20px;
-    height: 20px;
+    right: -8px;
+    top: -8px;
+    width: 16px;
+    height: 16px;
     background-image: url("/src/assets/static/img/icon-expand-more.svg");
   }
 
-  .active:after {
+  .auth-arrow-footer.active:after {
     content: "";
     position: absolute;
-    right: 0;
-    top: 0;
-
+    right: -8px;
+    top: -8px;
+    width: 16px;
+    height: 16px;
     background-image: url("/src/assets/static/img/icon-expand-less.png");
   }
 }
