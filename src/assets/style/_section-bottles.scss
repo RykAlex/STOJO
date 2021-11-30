@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   background: $light-green;
   border-radius: 16px;
   position: relative;
@@ -30,25 +31,6 @@
   color: $dark-green;
 }
 
-.bottles-img {
-  margin-top: 32px;
-  margin-bottom: 32px;
-  width: 194px;
-  height: 240px;
-
-  a {
-    display: flex;
-    width: 100%;
-    :hover {
-      cursor: default;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-}
 .soon {
   display: flex;
   align-items: center;
@@ -59,7 +41,7 @@
   height: 100px;
   top: 39%;
   left: 50%;
-  z-index: 2;
+  z-index: 1000;
   transform: translate(-50%, -50%);
   background: #777c65;
   opacity: 0.5;
@@ -69,17 +51,34 @@
 .bottles-name {
   margin-bottom: 5px;
 }
-.bottles-img a img {
-  transition: all 0.3s ease;
+.bottles-img {
+  position: relative;
+  margin: 0 auto;
+  width: 194px;
+  height: 240px;
+  z-index: 1000;
 }
 
-.bottles a:hover img {
+.bottles-img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.bottles-img img.open {
+  opacity: 1;
+}
+.bottles-img img.close {
   opacity: 0;
 }
-
-.bottles a:hover {
-  background: url(/src/assets/static/img/bottles-close.png) no-repeat 50% 50%;
-  background-size: cover;
+.bottles-img:hover img.open,
+.bottles-items:hover .bottles-img img.open {
+  opacity: 0;
+}
+.bottles-img:hover img.close,
+.bottles-items:hover .bottles-img img.close {
+  opacity: 1;
+  pointer-events: none;
+  transition: all 1s ease;
 }
 @media screen and (max-width: $tablet) {
   .bottles {
@@ -120,15 +119,11 @@
   }
 
   .bottles-img {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    width: 95px;
+    position: relative;
+    margin: 0 auto;
+    width: 94px;
     height: 117px;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+    z-index: 1000;
   }
   .soon {
     border-radius: 32px;

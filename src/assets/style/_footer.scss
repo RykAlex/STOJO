@@ -27,15 +27,7 @@
   cursor: default;
   border-bottom: 1px solid $black;
   white-space: nowrap;
-  &:first-child {
-    width: 62%;
-  }
-  &:nth-child(2) {
-    width: 67%;
-  }
-  &:nth-child(3) {
-    width: 82%;
-  }
+  max-width: max-content;
 }
 .footer-menu-item.info a.item-link {
   margin-bottom: 5px;
@@ -48,21 +40,7 @@
   cursor: default;
   border-bottom: 1px solid $black;
   white-space: nowrap;
-  &:first-child {
-    width: 58%;
-  }
-  &:nth-child(2) {
-    width: 73%;
-  }
-  &:nth-child(3) {
-    width: 100%;
-  }
-  &:nth-child(4) {
-    width: 90%;
-  }
-  &:nth-child(5) {
-    width: 47%;
-  }
+  max-width: max-content;
 }
 .footer-menu-item.account a.item-link {
   margin-bottom: 5px;
@@ -75,9 +53,7 @@
   cursor: default;
   border-bottom: 1px solid $black;
   white-space: nowrap;
-  &:first-child {
-    width: 60%;
-  }
+  max-width: max-content;
 }
 .footer-buy-items {
   display: flex;

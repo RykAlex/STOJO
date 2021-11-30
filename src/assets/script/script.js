@@ -3,7 +3,7 @@ let SimpleBar = require("simplebar");
 // Скрипт для header no auth
 // ============================================
 let openBtn = document.querySelector(".btn-retail");
-let arrowBtn = document.querySelector(".auth-arrow");
+let arrowBtn = document.querySelector(".btn-text");
 
 openBtn.addEventListener("click", function () {
   document.getElementById("authBtn").classList.toggle("showH");

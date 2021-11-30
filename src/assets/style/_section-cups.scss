@@ -13,6 +13,7 @@
   column-gap: 16px;
   row-gap: 16px;
 }
+
 .cups-items {
   display: flex;
   flex-direction: column;
@@ -21,39 +22,51 @@
   border-radius: 16px;
   @extend h5;
   color: $dark-grey;
+  position: relative;
 }
-
+.card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
 .cups-colors {
   margin-bottom: 40px;
   @extend body;
   color: $dark-green;
 }
-
 .cups-img {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  position: relative;
+  margin: 0 auto;
   width: 194px;
   height: 240px;
-  a {
-    display: flex;
-    width: 100%;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-}
-.cups-img a img {
-  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
-.cups-img a:hover img {
+.cups-img img {
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+}
+.cups-img img.open {
+  opacity: 1;
+}
+.cups-img img.close {
   opacity: 0;
 }
-
-.cups-img a:hover {
-  background: url(/src/assets/static/img/cups355.png) no-repeat 50% 50%;
+.cups-img:hover img.open,
+.cups-items:hover .cups-img img.open {
+  opacity: 0;
+}
+.cups-img:hover img.close,
+.cups-items:hover .cups-img img.close {
+  opacity: 1;
+  pointer-events: none;
+  transition: all 1s ease;
 }
 .cups-name {
   margin-bottom: 5px;
@@ -92,6 +105,9 @@
       height: 100%;
       object-fit: contain;
     }
+  }
+  .cups-img-close {
+    display: none;
   }
   .cups-img a:hover {
     background: url(/src/assets/static/img/cups355.png) no-repeat 50% 50%;

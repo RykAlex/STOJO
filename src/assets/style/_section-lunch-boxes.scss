@@ -22,7 +22,7 @@
   color: $dark-grey;
 }
 .lunch-boxes-text {
-  margin-right: 124px;
+  margin-right: 245px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,21 +33,33 @@
 }
 
 .lunch-boxes-img {
+  position: relative;
+  margin-left: 126px;
   width: 323px;
   height: 397px;
-  margin-left: 126px;
-  a {
-    display: flex;
-    width: 100%;
-    :hover {
-      cursor: default;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
+  z-index: 1000;
+}
+
+.lunch-boxes-img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.lunch-boxes-img img.open {
+  opacity: 1;
+}
+.lunch-boxes-img img.close {
+  opacity: 0;
+}
+.lunch-boxes-img:hover img.open,
+.lunch-boxes-items:hover .lunch-boxes-img img.open {
+  opacity: 0;
+}
+.lunch-boxes-img:hover img.close,
+.lunch-boxes-items:hover .lunch-boxes-img img.close {
+  opacity: 1;
+  pointer-events: none;
+  transition: all 1s ease;
 }
 .lunch-boxes-name {
   margin-bottom: 5px;
