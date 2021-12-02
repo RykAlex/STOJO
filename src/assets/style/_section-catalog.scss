@@ -23,25 +23,21 @@
   }
 }
 
-.catalogs-img {
-  width: 289px;
-  height: 420px;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.catalogs-img img {
+  object-fit: cover;
+  width: 100%;
 }
 .catalog-group {
   display: flex;
-  justify-content: space-between;
+  height: 100%;
+  margin-top: 32px;
+  padding-bottom: 32px;
   flex-direction: column;
   align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
 }
 .stojo-title {
   @extend h2;
@@ -50,9 +46,15 @@
   margin-bottom: 246px;
   white-space: nowrap;
 }
-.btn-secondary-arrow.catalog-btn {
+.catalog-btn {
   background-color: $white;
-  padding: 16px 16px 16px 24px;
+  padding: 16px 40px 16px 24px;
+  border-radius: 32px;
+}
+.group-button {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .button-text {
@@ -62,25 +64,29 @@
   line-height: 100%;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: $dark-green;
+  color: $black;
   margin-right: 8px;
-  &:hover {
-    color: $black;
-  }
 }
-.group-button {
-  display: flex;
-  align-items: center;
-}
+
 .button-icon {
-  width: 24px;
-  height: 24px;
-  img {
+  position: absolute;
+  top: -6px;
+  right: -20px;
+  width: 12px;
+  height: 12px;
+  svg {
     width: 100%;
-    height: 100px;
+    height: 100%;
     object-fit: cover;
   }
 }
+.catalog-btn:hover .button-text {
+  color: $dark-green;
+}
+.catalog-btn:hover .button-icon svg path {
+  fill: $dark-green;
+}
+
 .catalog-all {
   display: flex;
   justify-content: space-between;
@@ -117,22 +123,15 @@
     row-gap: 8px;
   }
   .catalogs-img {
-    width: 140px;
-    height: 203px;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    object-fit: cover;
+    width: 100%;
   }
   .stojo-items {
     width: 100%;
   }
-  .stojo-title {
-    margin-bottom: 120px;
-  }
-  .catalog-group button {
-    display: none;
+
+  .catalog-btn {
+    opacity: 0;
   }
 
   .all-stojo {
@@ -169,4 +168,11 @@
 }
 
 @media screen and (max-width: $mobile) {
+  .catalog-group {
+    margin-top: 16px;
+  }
+  .stojo-title {
+    font-size: 18px;
+    margin-bottom: 90px;
+  }
 }

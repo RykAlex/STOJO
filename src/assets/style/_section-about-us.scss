@@ -6,8 +6,8 @@
   display: flex;
 }
 .about-us-img {
-  width: 564px;
-  height: 600px;
+  max-width: 564px;
+  width: 100%;
   margin-right: 67px;
   img {
     width: 100%;
@@ -16,7 +16,7 @@
   }
 }
 .about-us-all {
-  max-width: 532px;
+  min-width: 287px;
 
   color: $dark-grey;
 }
@@ -72,8 +72,6 @@
     }
   }
   .about-us-all {
-    min-width: 287px;
-    width: 100%;
     color: $dark-grey;
   }
 

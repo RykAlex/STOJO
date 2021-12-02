@@ -42,13 +42,19 @@ window.addEventListener("click", function (event) {
 // ============================================
 let openMenu = document.querySelector(".header-items-no-auth .menu-icon");
 let openMenuAuth = document.querySelector(".header-items-auth .menu-icon");
-// let menuMobile = document.querySelector(".header-items-no-auth .menu-icon");
 let menuNoAuth = document.querySelector(".menu-noauth");
 let menuAuth = document.querySelector(".menu-auth");
 
 openMenu.addEventListener("click", function () {
-  menuNoAuth.classList.toggle("show");
+  menuNoAuth.classList.add("show");
 });
+window.addEventListener("click", function (e) {
+  if (!openMenu.contains(e.target) && !openMenu.contains(e.target)) {
+    menuNoAuth.classList.remove("show");
+    menuNoAuth.style.transition = "all .4s";
+  }
+});
+
 let closeMenu = document.querySelector(".menu-noauth .close-menu");
 closeMenu.addEventListener("click", function () {
   let navModal = document.querySelector(".menu-noauth");
@@ -65,6 +71,7 @@ closeMenuAuth.addEventListener("click", function () {
 openMenuAuth.addEventListener("click", function () {
   menuAuthD.classList.toggle("show");
 });
+
 // menuMobile.addEventListener("click", function () {
 //   menuNoAuth.classList.toggle("show");
 // });

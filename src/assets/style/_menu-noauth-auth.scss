@@ -3,23 +3,22 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 740px;
   width: 0;
   position: fixed;
-  z-index: 1000;
+  height: 100vh;
+  z-index: 10000;
   top: 0;
-  left: 0;
+  left: -360px;
   background-color: #fff;
   overflow-x: hidden;
   position: absolute;
 
   margin-top: 67px;
-  transition: margin-left 0.5s;
+  transition: left 0.4s ease-in-out;
   transition: width;
 }
 .menu-wrapper {
   width: 248px;
-  position: relative;
 }
 .close-menu {
   display: none;
@@ -32,13 +31,13 @@
   height: 900px;
   width: 0;
   position: absolute;
-  z-index: 1000;
+  z-index: 10000;
   top: 0;
   left: 0;
   background-color: #fff;
 
   margin-top: 67px;
-  transition: margin-left 0.5s;
+  transition: left 0.4s ease-in-out;
   transition: width;
 
   overflow: auto;
@@ -59,7 +58,7 @@
     position: absolute;
     content: "";
     bottom: -12px;
-    left: -6px;
+    left: 16px;
     border-bottom: 1px solid $light-green;
     width: 248px;
   }
