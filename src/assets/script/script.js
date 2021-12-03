@@ -26,10 +26,8 @@ let addedPadding = document.querySelector("body");
 openBtnF.addEventListener("click", function () {
   document.getElementById("authBtnF").classList.toggle("showF");
 
-  arrowBtnF.classList.add("activeF");
+  arrowBtnF.classList.toggle("activeF");
   addedPadding.style.transform = "translateY(-200px)";
-  arrowBtnF.classList.remove("activeF");
-  addedPadding.style.transform = "translateY(0)";
 });
 
 window.addEventListener("click", function (event) {

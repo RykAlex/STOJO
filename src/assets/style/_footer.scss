@@ -157,6 +157,8 @@ footer.mobile {
     width: 16px;
     height: 16px;
     background-image: url("/src/assets/static/img/icon-expand-more.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 
   .active:after {
@@ -166,7 +168,7 @@ footer.mobile {
     top: 17px;
     width: 16px;
     height: 16px;
-    background-image: url("/src/assets/static/img/icon-expand-less.png");
+    transform: rotate(180deg);
   }
   .panel {
     background-color: white;
@@ -260,7 +262,7 @@ footer.mobile {
 
   .btn-textf.footer::after {
     content: "";
-    background-image: url(/src/assets/static/img/down.svg);
+    background-image: url(/src/assets/static/img/icon-expand-more-footer.svg);
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
@@ -272,10 +274,7 @@ footer.mobile {
 
   .btn-textf.footer.activeF:after {
     content: "";
-    background-image: url(/src/assets/static/img/down.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
+
     transform: rotate(180deg);
 
     right: -30px;

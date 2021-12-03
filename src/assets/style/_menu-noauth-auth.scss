@@ -12,13 +12,12 @@
   background-color: #fff;
   overflow-x: hidden;
 
-  margin-top: 67px;
+  margin-top: 87px;
   transition: left 0.4s ease-in-out;
   transition: width;
+  box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.5);
 }
-body {
-  position: relative;
-}
+
 .menu-wrapper {
   width: 248px;
 }
