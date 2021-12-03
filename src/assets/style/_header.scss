@@ -67,6 +67,7 @@ header {
   position: relative;
   margin-right: 14px;
   pointer-events: none;
+
   &:after {
     content: "";
     display: block;
@@ -94,6 +95,14 @@ header {
 }
 
 .btn-retail.btn-text-secondary-arrow {
+  font-family: Inter;
+
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 100%;
+  color: $black;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   padding: 18px 33px 18px 20px;
 }
 

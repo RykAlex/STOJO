@@ -21,16 +21,20 @@ window.addEventListener("click", function (event) {
 
 let openBtnF = document.querySelector(".btn-retail .footer");
 let arrowBtnF = document.querySelector(".btn-textf");
+let addedPadding = document.querySelector("body");
 
 openBtnF.addEventListener("click", function () {
   document.getElementById("authBtnF").classList.toggle("showF");
+
   arrowBtnF.classList.toggle("activeF");
+  addedPadding.style.transform = "translateY(-200px)";
 });
 window.addEventListener("click", function (event) {
   if (!event.target.matches(".btn-textf")) {
     let openDropdownF = document.querySelector(".submenuF");
     if (openDropdownF.classList.contains("showF")) {
       openDropdownF.classList.remove("showF");
+      addedPadding.style.transform = "translateY(0)";
       arrowBtnF.classList.remove("activeF");
     }
   }

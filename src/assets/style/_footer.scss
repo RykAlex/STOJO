@@ -119,23 +119,7 @@ footer.mobile {
   .footer-items-noauth {
     flex-direction: column;
   }
-  .submenuF {
-    display: none;
-    position: absolute;
-    flex-direction: column;
-    min-width: 240px;
-    padding: 18px 0;
-    box-shadow: 0px 8px 16px rgba(42, 51, 91, 0.16);
-    border-radius: 16px;
-    padding-bottom: 20px;
-  }
-  .showF {
-    display: flex;
-    flex-direction: column;
-    width: 280px;
 
-    transition: ease all 0.5s;
-  }
   .accordion {
     background-color: $white;
     color: #444;
@@ -235,7 +219,23 @@ footer.mobile {
   .box-shadow {
     box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.07);
   }
+  .submenuF {
+    display: none;
+    position: absolute;
+    flex-direction: column-reverse;
+    min-width: 240px;
+    padding: 18px 0;
+    box-shadow: 0px 8px 16px rgba(42, 51, 91, 0.16);
+    border-radius: 16px;
+    padding-bottom: 20px;
+  }
+  .showF {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
 
+    transition: ease all 0.5s;
+  }
   .footer-right-items {
     display: flex;
     justify-content: center;
