@@ -8,14 +8,16 @@
   height: 100vh;
   z-index: 10000;
   top: 0;
-  left: -360px;
+  left: 0;
   background-color: #fff;
   overflow-x: hidden;
-  position: absolute;
 
   margin-top: 67px;
   transition: left 0.4s ease-in-out;
   transition: width;
+}
+body {
+  position: relative;
 }
 .menu-wrapper {
   width: 248px;
