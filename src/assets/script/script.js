@@ -19,21 +19,19 @@ window.addEventListener("click", function (event) {
   }
 });
 
-let openBtnF = document.querySelector(
-  ".footer-right-items .btn-retail .footer"
-);
-let arrowBtnF = document.querySelector(".auth-arrow-footer");
+let openBtnF = document.querySelector(".btn-retail .footer");
+let arrowBtnF = document.querySelector(".btn-textf");
 
 openBtnF.addEventListener("click", function () {
   document.getElementById("authBtnF").classList.toggle("showF");
-  arrowBtnF.classList.toggle("active");
+  arrowBtnF.classList.toggle("activeF");
 });
 window.addEventListener("click", function (event) {
-  if (!event.target.matches(".footer-right-items .btn-retail .footer")) {
+  if (!event.target.matches(".btn-textf")) {
     let openDropdownF = document.querySelector(".submenuF");
     if (openDropdownF.classList.contains("showF")) {
       openDropdownF.classList.remove("showF");
-      arrowBtnF.classList.remove("active");
+      arrowBtnF.classList.remove("activeF");
     }
   }
 });

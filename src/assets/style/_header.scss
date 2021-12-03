@@ -67,7 +67,7 @@ header {
   position: relative;
   margin-right: 14px;
   pointer-events: none;
-  &::after {
+  &:after {
     content: "";
     display: block;
     position: absolute;

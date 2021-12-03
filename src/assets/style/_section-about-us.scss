@@ -6,18 +6,15 @@
   display: flex;
 }
 .about-us-img {
-  max-width: 564px;
-  width: 100%;
+  width: 50%;
   margin-right: 67px;
   img {
-    width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 .about-us-all {
-  min-width: 287px;
-
+  width: 50%;
   color: $dark-grey;
 }
 .about-us-title {
@@ -62,8 +59,7 @@
     justify-content: center;
   }
   .about-us-img {
-    width: 287px;
-    height: 305px;
+    width: 100%;
     margin-right: 0;
     img {
       width: 100%;
@@ -73,11 +69,10 @@
   }
   .about-us-all {
     color: $dark-grey;
+    margin-bottom: 24px;
+    width: 100%;
   }
 
-  .about-us-all {
-    margin-bottom: 24px;
-  }
   .about-us-title {
     color: $black;
     font-size: 20px;

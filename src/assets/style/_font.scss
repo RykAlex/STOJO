@@ -96,25 +96,6 @@ body {
   line-height: 138%;
   color: $dark-green;
 }
-.btn-text-secondary-arrow {
-  font-family: Inter;
-  font-weight: 800;
-  font-size: 12px;
-  line-height: 100%;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: $black;
-}
-.btn-text-primary {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 12px;
-  line-height: 100%;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: $white;
-}
 
 @media screen and (max-width: $tablet) {
   body {
