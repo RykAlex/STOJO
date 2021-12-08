@@ -6,7 +6,7 @@ header {
   width: 100%;
 }
 .header-items-no-auth {
-  display: flex;
+  display: none;
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -131,7 +131,7 @@ header {
 /*Header-auth
 =================*/
 .header-items-auth {
-  display: none;
+  display: flex;
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -219,11 +219,18 @@ input {
 .showH {
   display: flex;
 }
-.icon-arrow {
+.icon-arrow-info {
   display: inline-block;
   transition: transform 0.2s;
 }
-.icon-arrow.active {
+.icon-arrow-info.active {
+  transform: rotate(180deg);
+}
+.icon-arrow-priv {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.icon-arrow-priv.active {
   transform: rotate(180deg);
 }
 .dropdown-content img {
@@ -263,7 +270,7 @@ input {
   }
   .header-items-no-auth {
     margin-top: 12px;
-    margin-bottom: 0;
+    margin-bottom: 12px;
   }
 
   .menu-mobile,
