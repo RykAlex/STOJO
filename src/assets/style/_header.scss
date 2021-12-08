@@ -6,7 +6,7 @@ header {
   width: 100%;
 }
 .header-items-no-auth {
-  display: none;
+  display: flex;
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -131,7 +131,7 @@ header {
 /*Header-auth
 =================*/
 .header-items-auth {
-  display: flex;
+  display: none;
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 20px;

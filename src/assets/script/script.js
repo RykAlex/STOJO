@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById("authBtnF").classList.toggle("showF");
 
     arrowBtnF.classList.toggle("activeF");
-    addedPadding.style.transform = "translateY(-200px)";
   });
 
   window.addEventListener("click", function (event) {
@@ -37,8 +36,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
       let openDropdownF = document.querySelector(".submenuF");
       if (openDropdownF.classList.contains("showF")) {
         openDropdownF.classList.remove("showF");
-
-        addedPadding.style.transform = "translateY(0)";
       }
     }
   });
