@@ -22,10 +22,15 @@
     cursor: default;
   }
 }
-
+.catalog-img {
+  width: 289px;
+  height: 420px;
+}
 .catalogs-img img {
-  object-fit: cover;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
 }
 .catalog-group {
   display: flex;
