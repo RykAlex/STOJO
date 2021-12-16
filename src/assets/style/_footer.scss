@@ -22,12 +22,12 @@
   &:last-child {
     margin-bottom: 0;
   }
-}
-.footer-menu-item a.item-link:hover {
-  cursor: default;
-  border-bottom: 1px solid $black;
-  white-space: nowrap;
-  max-width: max-content;
+  &:hover {
+    cursor: default;
+    border-bottom: 1px solid $black;
+    white-space: nowrap;
+    max-width: max-content;
+  }
 }
 
 .footer-buy-items {
