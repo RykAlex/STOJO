@@ -201,29 +201,6 @@ footer.mobile {
     z-index: 10000;
     width: 100%;
     background-color: $white;
-
-  }
-  .submenuF {
-    display: none;
-    position: absolute;
-    flex-direction: column-reverse;
-    min-width: 240px;
-    z-index: 200000;
-    top: 0;
-    left: 0;
-    padding: 18px 0;
-    box-shadow: 0px 8px 16px rgba(42, 51, 91, 0.16);
-    border-radius: 16px;
-    padding-bottom: 20px;
-    transform: translateY(-200px);
-    background-color: rgba(255, 255, 255, 1);
-  }
-  .showF {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    width: 280px;
-    transition: all 0.5s;
   }
   .footer-right-items {
     display: flex;
@@ -232,56 +209,42 @@ footer.mobile {
   }
 
   .btn-retail.footer {
-    padding-right: 43px;
+    padding-right: 28px;
     margin-right: 10px;
   }
-  .btn-textf.footer {
-    white-space: nowrap;
-    font-family: Inter;
-    font-weight: 800;
-    font-size: 11px;
-    line-height: 100%;
-    color: $dark-green;
-    letter-spacing: 0.1em;
-    position: relative;
-    text-transform: uppercase;
-  }
 
-  .btn-textf.footer::after {
+
+  .btn-text.footer {
+  align-items: center;
+  position: relative;
+  margin-right: 14px;
+  pointer-events: none;
+
+  &:after {
     content: "";
-    background-image: url(/src/assets/static/img/icon-expand-more-footer.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+    display: block;
     position: absolute;
-    right: -30px;
-    top: -6px;
-    width: 24px;
-    height: 24px;
+    top: 0;
+    right: -25px;
+    width: 12px;
+    height: 12px;
+    background-image: url("/src/assets/static/img/icon-expand-more-footer.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
   }
-
-  .btn-textf.footer.activeF:after {
-    content: "";
-
-    transform: rotate(180deg);
-
-    right: -30px;
-    top: -6px;
-    width: 24px;
-    height: 24px;
-  }
-  .btn-text-primary.footer {
-    white-space: nowrap;
-    padding: 8px 10px;
-    font-family: Inter;
-    font-weight: 800;
-    font-size: 11px;
-    line-height: 100%;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    background: $dark-green;
-    border-radius: 32px;
-    border: none;
-  }
+}
+.btn-text.footer.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  transform: rotate(180deg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
 }
 
 @media screen and (max-width: $mobile) {

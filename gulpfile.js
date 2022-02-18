@@ -12,7 +12,7 @@ import csso from "gulp-csso";
 import buffer from "vinyl-buffer";
 import sourcemaps from "gulp-sourcemaps";
 import GulpMem from "gulp-mem";
-//import imagemin from "gulp-imagemin";
+import imagemin from "gulp-imagemin";
 import browserify from "browserify";
 import source from "vinyl-source-stream";
 import flatmap from "gulp-flatmap";
@@ -74,9 +74,9 @@ function CSS() {
       argv.ram
         ? emptyBuffer()
         : autoPrefixer({
-            cascade: true,
-            overrideBrowserslist: ["last 3 versions"],
-          })
+          cascade: true,
+          overrideBrowserslist: ["last 3 versions"],
+        })
     )
     .pipe(argv.min ? csso() : emptyBuffer())
     .pipe(argv.ram ? emptyBuffer() : replace("/src/", "/"))
@@ -176,17 +176,17 @@ function copyStatic() {
     .pipe(browserSync.stream());
 }
 
-// function minimizeImgs() {
-//   return gulp
-//     .src("./src/assets/static/img/**/*")
-//     .pipe(
-//       imagemin({
-//         optimizationLevel: 5,
-//         verbose: true,
-//       })
-//     )
-//     .pipe(gulp.dest("./build/assets/static/img"));
-// }
+function minimizeImgs() {
+  return gulp
+    .src("./src/assets/static/img/**/*")
+    .pipe(
+      imagemin({
+        optimizationLevel: 5,
+        verbose: true,
+      })
+    )
+    .pipe(gulp.dest("./build/assets/static/img"));
+}
 
 function watch() {
   gulp.watch("./src/*.html", HTML);
@@ -219,5 +219,5 @@ gulp.task(
     argv.watch ? gulp.parallel(watch, browserSyncInit) : emptyBuffer
   )
 );
-// gulp.task("imagemin", minimizeImgs);
+gulp.task("imagemin", minimizeImgs);
 gulp.task("ttfToWoff", ttfToWoff);

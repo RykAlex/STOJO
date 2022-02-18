@@ -1,16 +1,48 @@
 .btn-retail {
-  padding: 18px 20px 18px 24px;
+  padding: 18px 32px 18px 24px;
   border: none;
   background: $light-green;
   border-radius: 32px;
   text-transform: uppercase;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 100%;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
 
   &:hover {
     cursor: default;
     box-shadow: inset 0px 0px 160px rgba(0, 0, 0, 0.07);
   }
 }
-.btn-secondary-arrow {
+
+.btn-retail.footer {
+  padding: 14.5px 10px 14.5px 19px;
+  border: none;
+  background: $light-green;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 11px;
+  line-height: 100%;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $dark-green;
+
+  &:hover {
+    cursor: default;
+    box-shadow: inset 0px 0px 160px rgba(0, 0, 0, 0.07);
+  }
+}
+
+
+
+.btn-secondary {
   padding: 18px 24px;
   border: none;
   background: $dark-green;
@@ -29,6 +61,47 @@
     box-shadow: inset 0px 4px 160px rgba(255, 255, 255, 0.07);
   }
 }
+
+.btn-secondary.footer {
+  padding: 14.5px 12px;
+  border: none;
+  background: $dark-green;
+  border-radius: 32px;
+  text-transform: uppercase;
+  font-family: Inter;
+  font-weight: 800;
+  font-size: 11px;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $white;
+
+  &:hover {
+    cursor: default;
+    box-shadow: inset 0px 4px 160px rgba(255, 255, 255, 0.07);
+  }
+}
+
+.btn-secondary-text {
+  padding: 18px 24px;
+  border: none;
+  background: $dark-green;
+  border-radius: 32px;
+  text-transform: uppercase;
+  font-family: Inter;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $black;
+
+  &:hover {
+    cursor: default;
+    box-shadow: inset 0px 4px 160px rgba(255, 255, 255, 0.07);
+  }
+}
+
 .btn-primary-icon {
   padding: 20px 30px 16px 59px;
   border: none;

@@ -20,6 +20,8 @@
 		"setup": "npm i"
 	},
 	"devDependencies": {
+		"babel-preset-es2015": "^6.24.1",
+		"babelify": "^10.0.0",
 		"browser-sync": "^2.27.7",
 		"browserify": "^17.0.0",
 		"gulp": "^4.0.2",
