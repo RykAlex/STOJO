@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
   let SimpleBar = require("simplebar");
 
   btnIconArrow();
-  Accordion();
+  accordion();
   btnTextArrow();
-  openMenuNoAuth();
-  openMenuAuth();
+  openLeftMenu();
+
 
   function btnIconArrow() {
     document.querySelectorAll('.dropdown').forEach(item => {
@@ -25,11 +25,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
   }
 
-  function Accordion() {
-    let acc = document.getElementsByClassName("accordion");
-
-    for (let i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
+  function accordion() {
+    document.querySelectorAll('.accordion').forEach(item => {
+      item.addEventListener("click", function () {
         this.classList.toggle("active");
 
         let panel = this.nextElementSibling;
@@ -44,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
           panel.style.maxHeight = panel.scrollHeight + "px";
         }
       });
-    }
+    })
   }
 
   function btnTextArrow() {
@@ -62,34 +60,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
           arrow.classList.remove('active');
         }
       });
-    })
-  }
-
-  function openMenuNoAuth() {
-    let openMenu = document.querySelector(".header-items-no-auth .menu-icon");
-    let menuNoAuth = document.querySelector(".menu-noauth");
-    openMenu.addEventListener("click", function () {
-      menuNoAuth.classList.toggle("show");
-    });
-    window.addEventListener("click", function (e) {
-      if (!openMenu.contains(e.target)) {
-        menuNoAuth.classList.remove("show");
-        menuNoAuth.style.transition = "all .4s";
-      }
     });
   }
 
-  function openMenuAuth() {
-    let openMenuAuth = document.querySelector(".header-items-auth .menu-icon");
-    let menuAuth = document.querySelector(".menu-auth");
-    openMenuAuth.addEventListener("click", function () {
-      menuAuth.classList.toggle("show");
-    });
-    window.addEventListener("click", function (e) {
-      if (!openMenuAuth.contains(e.target)) {
-        menuAuth.classList.remove("show");
-        menuAuth.style.transition = "all .4s";
-      }
+  function openLeftMenu() {
+    let icon = document.querySelectorAll('.menu-icon');
+    let menu = document.querySelector('.menu-auth');
+    icon.forEach(item => {
+
+      item.addEventListener("click", () => {
+        menu.classList.toggle('show');
+
+
+
+
+        // window.addEventListener("click", function (e) {
+        //   if (!icon.contains(e.target)) {
+        //     menu.classList.remove("show");
+        //   }
+        // });
+      })
     });
   }
 
