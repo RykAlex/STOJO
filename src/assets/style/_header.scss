@@ -7,7 +7,7 @@ header {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
 }
 .header-items-no-auth {
-  display: none;
+  display: flex;
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -126,7 +126,7 @@ header {
 /*Header-auth
 =================*/
 .header-items-auth {
-  display: flex;
+  display:none;
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 20px;

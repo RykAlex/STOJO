@@ -64,23 +64,50 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   function openLeftMenu() {
-    let icon = document.querySelectorAll('.menu-icon');
+    let icon = document.querySelector('.menu-icon');
     let menu = document.querySelector('.menu-auth');
-    icon.forEach(item => {
-
-      item.addEventListener("click", () => {
-        menu.classList.toggle('show');
-
-
-
-
-        // window.addEventListener("click", function (e) {
-        //   if (!icon.contains(e.target)) {
-        //     menu.classList.remove("show");
-        //   }
-        // });
-      })
+    icon.addEventListener("click", () => {
+      menu.classList.toggle('show');
     });
+    window.addEventListener("click", function (e) {
+      if (!icon.contains(e.target)) {
+        menu.classList.remove("show");
+      }
+    })
   }
 
+
+
 });
+
+
+// function initFooterAccordeons(accordeons) {
+//   if (accordeons.length) {
+//     accordeons.forEach((accordeon) => {
+//       let chevron = accordeon.querySelector(".icon-chevron-down")
+//       accordeon.querySelector("h5")
+//         .addEventListener("click", function () {
+//           vanillaSlideToggle(accordeon.querySelector(".col-content"))
+//           chevron.classList.toggle("icon-chevron-down")
+//           chevron.classList.toggle("icon-chevron-up")
+//         })
+//     })
+//   }
+// }
+
+// function vanillaSlideToggle(elem, initialHeight) {
+//   event.stopPropagation
+//   if (initialHeight) {
+//     if (elem.style.maxHeight != `${initialHeight}px`) {
+//       elem.style.maxHeight = `${initialHeight}px`
+//     } else {
+//       elem.style.maxHeight = `${elem.scrollHeight}px`
+//     }
+//   } else {
+//     if (elem.style.maxHeight) {
+//       elem.style.maxHeight = null
+//     } else {
+//       elem.style.maxHeight = `${elem.scrollHeight}px`
+//     }
+//   }
+// }

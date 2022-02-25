@@ -1,21 +1,21 @@
-.menu-auth .no {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 0;
-  position: fixed;
-  height: 100vh;
-  z-index: 10000;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  overflow-x: hidden;
-  margin-top: 87px;
-  transition: left 0.4s ease-in-out;
-  transition: width;
-  box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.5);
-}
+// .menu-auth .no {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-items: flex-start;
+//   width: 0;
+//   position: fixed;
+//   height: 100vh;
+//   z-index: 10000;
+//   top: 0;
+//   left: 0;
+//   background-color: #fff;
+//   overflow-x: hidden;
+//   margin-top: 87px;
+//   transition: left 0.4s ease-in-out;
+//   transition: width;
+//   box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.5);
+// }
 
 .menu-wrapper {
   min-width: 287px;
@@ -38,8 +38,7 @@
   background-color: #fff;
   overflow-x: hidden;
   margin-top: 87px;
-  transition: left 0.4s ease-in-out;
-  transition: width;
+  transition: all ease 0.5s;
   box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.5);
 }
 
@@ -47,7 +46,7 @@
   display: flex;
   flex-direction: column;
   width: 287px;
-  transition: ease all 0.5s;
+
 }
 .noauth-items {
   padding-top: 4px;
