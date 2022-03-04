@@ -4,6 +4,7 @@
 .section-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 56px;
 }
 .section-photo {
  max-width: 700px;
@@ -72,6 +73,12 @@ margin-bottom: 32px;
 }
 .cv-text {
   margin-bottom: 19px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: $black;
 }
 .cv-tag {
   border: 2px solid #A3AC9A;
@@ -99,6 +106,300 @@ margin-bottom: 32px;
   }
   
 }
+.cc-text {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: $black;
+  margin-bottom: 28px;
+}
+.change-color {
+  margin-bottom: 48px;
+}
+.cc-radios {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -2px;
+}
+label {
+  width: 42px;
+  height: 42px;
+  margin: 2px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid white;
+  position: relative;
+  &.bordered {
+    &::after {
+       width: 100%;
+       height: 100%;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       border: 1px solid $middle-green1;
+       position: absolute;
+       border-radius: 50%;
+       content: "";
+    }
+  }
+}
+input {
+  visibility: hidden;
+  appearance: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &:after {
+    visibility: visible;
+    position: absolute;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    content: "";
+  }
+  &:before {
+   content: "";
+   opacity: 0;
+   visibility: visible;
+   position: absolute;
+   border: 2px solid $dark-green;
+   width: 38px;
+   height: 38px;
+   border-radius: 50%;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+  }
+  &:hover::before { 
+    opacity: .5;
+  }
+  &:checked {
+   &::before,
+   &::after {
+      opacity: 1;
+   }
+  }
+
+}
+  
+.btn-secondary.detail {
+  padding: 18px 108px;
+  margin-bottom: 8px;
+}
+.ac-text {
+font-family: Inter;
+font-weight: 500;
+font-size: 13px;
+line-height: 138%;
+text-align: center;
+color: #777C65;
+}
+.characteristics {
+  margin-bottom: 65px;
+
+}
+.c-title {
+  font-family: Inter;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 36px;
+  color: #3C3C3A;
+  margin-bottom: 25px;
+}
+
+.ttx {
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #F9FAEA;
+  border-bottom: 1px solid #F9FAEA;
+}
+.ttx-name {
+  width: 50%;
+  margin-right: 20px;
+}
+.ttx-value {
+  width: 50%;
+}
+.ttx-text {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 216%;
+  color: #3C3C3A;
+}
+.about-us-all.detail-about {
+  max-width: 700px;
+  width: 100%;
+}
+
+.description {
+  margin-bottom: 65px;
+}
+.section-title {
+  padding-top: 0;
+  font-family: Inter; 
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  color: #3C3C3A;
+  margin-bottom: 25px;
+}
+.section-text {
+  max-width: 700px;
+  width: 100%;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 170%;
+  color: #3C3C3A;
+}
+section.video {
+  margin-bottom: 65px;
+}
+.section-container {
+  padding-top: 0!important;
+  position: relative;
+  padding-top: 56.25%;
+  &img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+.benefits.sec {
+  margin-bottom: 90px;
+}
+.benefits-wrapper.sec{
+  max-width: 700px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 57px;
+  grid-row-gap: 32px;
+}
+.payment {
+  margin-bottom: 48px;
+}
+.delivery {
+  margin-bottom: 142px;
+}
+// .color-radios {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin: -2px;
+//   label {
+//      margin: 2px;
+//      cursor: pointer;
+//      display: inline-flex;
+//      justify-content: center;
+//      align-items: center;
+//      border: 5px solid white;
+//      width: 42px;
+//      height: 42px;
+//      border-radius: 50%;
+//      position: relative;
+//      user-select: none;
+//      &.not-availabe {
+//         input {
+//            &::after {
+//               mask-image: url(/src/assets/static/img/icon-close.svg);
+//               opacity: 1;
+//               background: $middle-green1;
+//               width: 24px;
+//               height: 24px;
+//            }
+//         }
+//         &.contrast {
+//            input {
+//               &::after {
+//                  background: $middle-green1;
+//               }
+//            }
+//         }
+//      }
+//      &.bordered {
+//         &::after {
+//            width: 100%;
+//            height: 100%;
+//            top: 50%;
+//            left: 50%;
+//            transform: translate(-50%, -50%);
+//            border: 1px solid $middle-green1;
+//            position: absolute;
+//            border-radius: 50%;
+//            content: "";
+//         }
+//      }
+    //  &:hover {
+    //     input {
+    //        &::before {
+    //           opacity: 0.5;
+    //        }
+    //     }
+    //  }
+//      input {
+//         cursor: pointer;
+//         visibility: hidden;
+//         position: relative;
+//         width: 100%;
+//         height: 100%;
+//         appearance: none;
+//         &::after {
+//            visibility: visible;
+//            position: absolute;
+//            mask-size: contain;
+//            mask-repeat: no-repeat;
+//            mask-position: center;
+//            width: 16px;
+//            height: 16px;
+//            top: 50%;
+//            left: 50%;
+//            transform: translate(-50%, -50%);
+//            opacity: 0;
+//            content: "";
+//         }
+//         &::before {
+//            content: "";
+//            opacity: 0;
+//            visibility: visible;
+//            position: absolute;
+//            border: 2px solid $dark-green;
+//            width: 42px;
+//            height: 42px;
+//            border-radius: 50%;
+//            top: 50%;
+//            left: 50%;
+//            transform: translate(-50%, -50%);
+//         }
+//         &:checked {
+//            &::before,
+//            &::after {
+//               opacity: 1;
+//            }
+//         }
+//      }
+//   }
+// }
+
+
+
+
 
 @media screen and (max-width: $tablet) {
   .img-container {
