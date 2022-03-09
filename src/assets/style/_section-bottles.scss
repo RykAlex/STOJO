@@ -21,8 +21,6 @@
   background: $light-green;
   border-radius: 16px;
   position: relative;
-  @extend h5;
-  color: $dark-grey;
 }
 
 .bottles-colors {
@@ -106,7 +104,6 @@
 
   .bottles-items {
     border-radius: 8px;
-    @extend h5;
     color: $dark-grey;
     font-size: 15px;
     line-height: 120%;

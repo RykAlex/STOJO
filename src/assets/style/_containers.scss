@@ -21,6 +21,12 @@
     max-width: 680px;
     margin: auto;
   }
+  .container-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+  }
   @import "variables-breakpoints";
   @media screen and (max-width: $tablet) {
     padding: 0 16px;
