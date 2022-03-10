@@ -6,33 +6,31 @@
 
 .column-left{
   display: flex;
-  max-width: 700px;
-  width: 100%;
+  width: calc(100% - 500px);
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-right: 30px;
-  
+}
+.wrapper-column-right {
+  width: calc(100% - 730px);
 }
 .column-right {
-  max-width: 470px;
-  width: 100%;
+  position: sticky;
+  top: 100px;
 }
 .column-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
   margin-right: -18px;
 }
 .column-item {
   height: 424px;
-  margin-bottom: 18px;
-  margin-right: 18px;
   background: #EAECE5;
   border-radius: 16px;
   img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 }
 
@@ -74,40 +72,51 @@ color: $dark-green;
   flex-wrap: wrap;
   margin-right: -16px;
 }
-.cv-text {
-  margin-bottom: 19px;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: $black;
-}
-.cv-tag {
-  border: 2px solid #A3AC9A;
-  box-sizing: border-box;
-  border-radius: 32px;
-  margin-right: 16px;
-  margin-bottom: 10px;
-  &.active {
-    border: 2px solid $black;  
-  }
-} 
-.cv-tag.text {
-  font-family: Inter;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 170%;
-  align-items: center;
-  text-align: center;
-  color: #A3AC9A;
+.label-volume {
   width: 90px;
-  padding: 7px 0;
-  &.active{
-    color: $black;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-right: 16px;
+  &::before {
+  content: "";
+  opacity: 0.5;
+  visibility: visible;
+  position: absolute;
+  border: 2px solid $middle-green1;
+  border-radius: 32px;
+  width: 90px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   }
-  
+  &:hover::before{
+  opacity: 1;
+  border-color: $black;
+  color: $black;
+  }
+  &:checked {
+      opacity: 1;
+  border-color: $black;
+  }
 }
+.input-volume {
+  visibility: hidden;
+  appearance: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &+span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .cc-text {
   font-family: Inter;
   font-style: normal;
@@ -125,6 +134,7 @@ color: $dark-green;
   flex-wrap: wrap;
   margin: -2px;
 }
+
 label {
   width: 42px;
   height: 42px;
