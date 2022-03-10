@@ -93,29 +93,34 @@ color: $dark-green;
   left: 50%;
   transform: translate(-50%, -50%);
   }
-  &:hover::before{
-  opacity: 1;
-  border-color: $black;
-  color: $black;
+ &:hover {
+    input {
+       &::before {
+          opacity: 0.5;
+       }
+    }
   }
-  &:checked {
-      opacity: 1;
-  border-color: $black;
-  }
-}
-.input-volume {
+  input {
   visibility: hidden;
   appearance: none;
   position: relative;
   width: 100%;
   height: 100%;
+  color: $middle-green1;
   &+span {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    &:hover {
+      color: $black;
+      cursor: pointer;
+      }
+    }
+    
   }
 }
+
 
 .cc-text {
   font-family: Inter;
@@ -135,7 +140,7 @@ color: $dark-green;
   margin: -2px;
 }
 
-label {
+.label-color {
   width: 42px;
   height: 42px;
   margin: 2px;
@@ -158,8 +163,7 @@ label {
        content: "";
     }
   }
-}
-input {
+  input {
   visibility: hidden;
   appearance: none;
   position: relative;
@@ -203,6 +207,8 @@ input {
   }
 
 }
+}
+
   
 .btn-secondary.detail {
   padding: 18px 108px;
