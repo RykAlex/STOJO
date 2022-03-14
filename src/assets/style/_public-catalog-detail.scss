@@ -91,39 +91,27 @@ color: $dark-green;
 .label-wrapper input {
   visibility: hidden;
   appearance: none;
-  cursor: pointer;
 }
-.label-wrapper input::before {
-  content: '';
-  display: inline-flex;
-  visibility: visible;
-  width: 86px;
-  height: 36px;
-  border: 2px solid $middle-green1;
-  border-radius: 32px;
-  position: relative;
+.label-wrapper > .inner {
+  display: flex;
   justify-content: center;
   align-items: center;
+ 
+  height: 40px;
+  padding: 0 17px;
+  border: 2px solid $middle-green1;
+  border-radius: 32px;
 
 }
-.label-wrapper input:hover::before {
-  border-color: $dark-green;
+.label-wrapper > input:checked + .inner {
+    color: $black;
+    border-color: $black;
+
 }
-.label-wrapper input:checked::before {
-  border-color: $black;
-}
-.label-wrapper input + .inner {
-  position: absolute;
-  color:$middle-green1;
-}
-.label-wrapper input:checked + .inner {
-  color:$black;
-}
-.label-wrapper input:hover + .inner {
- color: $dark-green;
-}
-.label-wrapper input:hover + .inner {
-  color: $dark-green;
+.label-wrapper > .inner:hover {
+    color: #777d99;
+    border-color: #777d99;
+
 }
 
 
@@ -374,7 +362,21 @@ color: #777C65;
 
 
 @media screen and (max-width: $tablet) {
+.container-section {
+  flex-direction: column-reverse;
+}
+.column-left{
+  width: 100%;
+}
+.wrapper-column-right {
+  width: 100%;
+}
 
+.column-items {
+
+  grid-template-columns: 1fr;
+
+}
 }
 
 @media screen and (max-width: $mobile) {
