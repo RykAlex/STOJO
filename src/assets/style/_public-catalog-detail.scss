@@ -73,45 +73,58 @@ color: $dark-green;
   margin-right: -16px;
 }
 // Label volume
-.label-volume {
+.tags-items {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+.label-wrapper {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  margin-right: 16px;
+  user-select: none;
+  flex-shrink: 0;
+  flex-grow: 1;
+  cursor: pointer;
 }
-.label-volume > input {
+.label-wrapper input {
   visibility: hidden;
   appearance: none;
-  position: relative;
+  cursor: pointer;
 }
-.inner {
-  padding: 5px 17px;
+.label-wrapper input::before {
+  content: '';
+  display: inline-flex;
+  visibility: visible;
+  width: 86px;
+  height: 36px;
   border: 2px solid $middle-green1;
   border-radius: 32px;
-  color: $middle-green1;
-  opacity: 0.5;
-}
-.inner + span {
-  display: flex;
-  position: absolute;
+  position: relative;
   justify-content: center;
   align-items: center;
-  top: 0;
-  left: 0;
+
 }
-.label-volume > input + .inner:hover {
-  cursor: pointer;
-  opacity: 1;
+.label-wrapper input:hover::before {
+  border-color: $dark-green;
 }
-input:checked + .inner {
-  color: $black;
+.label-wrapper input:checked::before {
   border-color: $black;
-  opacity: 1;
 }
-
-
-
+.label-wrapper input + .inner {
+  position: absolute;
+  color:$middle-green1;
+}
+.label-wrapper input:checked + .inner {
+  color:$black;
+}
+.label-wrapper input:hover + .inner {
+ color: $dark-green;
+}
+.label-wrapper input:hover + .inner {
+  color: $dark-green;
+}
 
 
 // ===================
