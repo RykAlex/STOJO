@@ -3,12 +3,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
+.scrollbar {
+  overflow-y: hidden;
+  padding-top: 10px;
+  
+}
 .column-left{
-  display: flex;
   width: calc(100% - 500px);
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 .wrapper-column-right {
   width: calc(100% - 730px);
@@ -367,14 +368,23 @@ color: #777C65;
 }
 .column-left{
   width: 100%;
+ 
 }
 .wrapper-column-right {
   width: 100%;
 }
 
 .column-items {
-
-  grid-template-columns: 1fr;
+  display: flex;  
+  width: 1200px; 
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 15px;
+  overflow: hidden;
+}
+.column-item {
+  height: 358px;
+  margin-right: 0;
 
 }
 }
