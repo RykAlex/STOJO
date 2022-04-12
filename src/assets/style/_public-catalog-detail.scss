@@ -26,7 +26,11 @@
 .column-right {
   margin-left: 30px;
   position: sticky;
-  top: 100px;
+  top: 112px;
+}
+
+.scrollbar {
+  margin-bottom: 56px;
 }
 
 .back-to-catalog {
@@ -124,14 +128,9 @@
 
 
 // ===================
-.cc-text {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
+.change-color h5 {
   color: $black;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .change-color {
@@ -225,11 +224,8 @@
   margin-bottom: 8px;
 }
 
-.ac-text {
-  font-family: Inter;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 138%;
+.availability-condition>.caption {
+
   text-align: center;
   color: #777C65;
 }
@@ -286,25 +282,62 @@
   .container-section {
     display: flex;
     flex-direction: column-reverse;
-    width: 100%;
-
   }
 
   .column-items {
     display: flex;
-
-
-    height: auto;
-
-
+    padding-bottom: 25px;
   }
 
   .column-item {
     flex-shrink: 0;
+    width: 100%;
   }
 
   .column-right {
     margin-left: 0;
+  }
+
+  .scrollbar {
+    margin-top: 28px;
+    margin-bottom: 24px;
+  }
+
+  .simplebar-scrollbar.simplebar-visible:before {
+    opacity: 1;
+  }
+
+  .simplebar-scrollbar:before {
+    border-radius: 0;
+    background: $black;
+  }
+
+  .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+    height: 2px;
+  }
+
+  .inner span {
+    font-size: 15px;
+  }
+
+  .btn-secondary.detail {
+    padding: 14px 18px;
+  }
+
+  .change-color {
+    margin-bottom: 38px;
+  }
+
+  .simplebar-scrollbar:after {
+    position: absolute;
+    content: "";
+    background: #A3AC9A;
+    left: 2px;
+    top: 2px;
+    height: 1px;
+    width: 304px;
+
+
   }
 }
 

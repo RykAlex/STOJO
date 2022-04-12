@@ -4,6 +4,7 @@
   font-weight: 800;
   font-display: swap;
 }
+
 @font-face {
   font-family: Inter;
   src: url(/src/assets/static/font/Inter-Black.woff2);
@@ -53,6 +54,7 @@ h3 {
   line-height: 122%;
   color: $dark-green;
 }
+
 h4 {
   font-family: Inter;
   font-size: 20px;
@@ -60,6 +62,7 @@ h4 {
   line-height: 120%;
   color: $dark-green;
 }
+
 h5 {
   font-family: Inter;
   font-size: 18px;
@@ -67,6 +70,7 @@ h5 {
   line-height: 122%;
   color: $dark-green;
 }
+
 h6 {
   font-family: Inter;
   font-size: 15px;
@@ -74,9 +78,11 @@ h6 {
   line-height: 120%;
   color: $dark-green;
 }
+
 .text-black {
   color: $black;
 }
+
 .subtitle {
   font-family: Inter;
   font-size: 19px;
@@ -97,42 +103,46 @@ h6 {
   body {
     font-size: 15px;
   }
+
   h1 {
     font-size: 24px;
   }
+
   h2 {
     font-size: 20px;
   }
+
   h3 {
     font-size: 18px;
   }
+
   h4 {
     font-size: 17px;
   }
+
   h5 {
     font-size: 15px;
     line-height: 120%;
-  }
-  h5 {
-    font-size: 14px;
   }
 
   .subtitle {
     font-size: 15px;
     line-height: 150%;
   }
+
   body {
     font-size: 14px;
     line-height: 170%;
   }
+
   .caption {
     font-size: 11px;
     line-height: 120%;
   }
+
   .btn-text {
     font-size: 11px;
   }
 }
 
-@media screen and (max-width: $mobile) {
-}
+@media screen and (max-width: $mobile) {}

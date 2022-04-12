@@ -4,15 +4,18 @@
   padding-bottom: 92px;
   position: relative;
 }
+
 .section-title {
   color: $dark-grey;
   padding-top: 90px;
   margin-bottom: 16px;
 }
+
 .stojo-text.subtitle {
   color: $dark-grey;
   margin-bottom: 32px;
 }
+
 .tag {
   padding: 24px 40px;
   background: $white;
@@ -33,32 +36,39 @@
     color: $black;
   }
 }
+
 .tag:last-child {
   margin-right: 0;
 }
+
 .section-wrapper {
   display: inline-block;
   justify-content: space-between;
 }
+
 .section-left {
   width: 44%;
 }
+
 .section-right {
   position: absolute;
   bottom: -178px;
   right: 0;
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 }
+
 @media screen and (max-width: $tablet) {
   .products-stojo {
     margin-top: 57px;
     background: $light-green;
     padding-bottom: 146px;
   }
+
   .section-wrapper {
     flex-direction: column;
     padding-bottom: 9px;
@@ -70,13 +80,16 @@
     padding-top: 40px;
     font-size: 24px;
   }
+
   .stojo-text {
     font-size: 15px;
     margin-bottom: 16px;
   }
+
   .section-left {
     width: 100%;
   }
+
   .section-right {
     width: 320px;
     height: 226px;
@@ -91,6 +104,7 @@
       object-fit: contain;
     }
   }
+
   .tag {
     padding: 24px 40px;
     background: $white;
@@ -111,7 +125,8 @@
       color: $black;
     }
   }
+
+
 }
 
-@media screen and (max-width: $mobile) {
-}
+@media screen and (max-width: $mobile) {}
