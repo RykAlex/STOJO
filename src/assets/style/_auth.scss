@@ -1,0 +1,30 @@
+.auth-img {
+  margin: 0 auto;
+}
+
+
+.footer-items-noauth {
+  display: none !important;
+}
+
+.auth-img {
+
+  height: 100vh;
+}
+
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: $tablet) {
+  .mobile {
+    display: block;
+  }
+
+  .desk {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $mobile) {}
