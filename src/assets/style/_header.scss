@@ -6,9 +6,8 @@ header {
   width: 100%;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
 }
-header + main {
-  padding-top: 112px;
-}
+
+
 .header-items-no-auth {
   display: flex;
   justify-content: space-between;
@@ -19,19 +18,23 @@ header + main {
 .left-items {
   position: relative;
 }
+
 .right-items {
   display: flex;
   align-items: center;
 }
+
 .menu-icon {
   width: 48px;
   height: 48px;
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 }
+
 .logo {
   width: 154px;
   height: 60px;
@@ -39,9 +42,11 @@ header + main {
   top: -5px;
   left: 72px;
 }
+
 .btn-retail {
   margin-right: 48px;
 }
+
 .menu-mobile,
 .logo-mobile {
   display: none;
@@ -51,10 +56,12 @@ header + main {
   position: relative;
   display: inline-block;
 }
+
 .no-auth-items {
   display: flex;
   align-items: center;
 }
+
 .submenu {
   display: none;
   position: absolute;
@@ -65,10 +72,12 @@ header + main {
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.6);
   z-index: 10;
+
   &.submenuF {
     bottom: 100%;
   }
 }
+
 .btn-text {
   align-items: center;
   position: relative;
@@ -89,12 +98,13 @@ header + main {
     background-size: contain;
   }
 }
+
 .btn-text.active:after {
   content: "";
   display: block;
   position: absolute;
-   top: 0;
-    right: -25px;
+  top: 0;
+  right: -25px;
   width: 12px;
   height: 12px;
   background-image: url("/src/assets/static/img/icon-expand-less.svg");
@@ -108,6 +118,7 @@ header + main {
   display: flex;
   margin-right: 16px;
 }
+
 .submenu-items {
   display: flex;
   align-items: center;
@@ -115,6 +126,7 @@ header + main {
   margin-left: 10px;
   height: 40px;
   padding-left: 10px;
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -126,14 +138,16 @@ header + main {
   cursor: default;
   margin-right: 17px;
 }
+
 /*Header-auth
 =================*/
 .header-items-auth {
-  display:none;
+  display: none;
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 .search-compact {
   border: 2px solid $middle-green1;
   display: flex;
@@ -145,6 +159,7 @@ header + main {
 
   margin-left: 231px;
 }
+
 input {
   font-family: Inter;
 
@@ -152,26 +167,32 @@ input {
   font-size: 15px;
   line-height: 170%;
   color: $dark-green;
+
   &:focus {
     width: 233px;
   }
 }
+
 [type="search"] {
   border: none;
   outline: none;
   margin-left: 25px;
 }
+
 .search-compact img {
   margin-right: 10px;
 }
+
 .left-items {
   display: flex;
   align-items: center;
 }
+
 .header-items-auth.right-items {
   display: flex;
   align-items: center;
 }
+
 .cup-icon {
   margin-right: 16px;
 }
@@ -180,18 +201,22 @@ input {
   display: flex;
   align-items: center;
 }
+
 .icon-pic {
   margin-right: 14px;
 }
+
 .info-icons:hover,
 .info-icons:focus {
   filter: drop-shadow(0px 8px 16px rgba(42, 51, 91, 0.16));
   border-radius: 16px;
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -201,6 +226,7 @@ input {
   border-radius: 16px;
   padding: 18px 14px;
 }
+
 .dropdown-content a {
   font-family: Inter;
   padding: 12px 10px;
@@ -210,10 +236,12 @@ input {
   white-space: nowrap;
   color: $black;
 }
+
 .dropdown-content a:hover {
   background: #eaece5;
   border-radius: 8px;
 }
+
 .show {
   display: flex;
 }
@@ -223,10 +251,12 @@ input {
   transition: transform 0.2s;
   transform: rotate(180deg);
 }
+
 .dropdown-content img {
   display: inline-block;
   margin-right: 16px;
 }
+
 .btn-primary-icon.btn-text-primary.mobile {
   display: none;
   margin-left: 22px;
@@ -250,14 +280,18 @@ input {
   background-color: $white;
   line-height: 29px;
 }
+
 .footer-buy {
   display: flex;
 }
+
 @media screen and (max-width: $tablet) {
+
   .right-items,
   .logo {
     display: none;
   }
+
   .header-items-no-auth {
     margin-top: 12px;
     margin-bottom: 12px;
@@ -268,26 +302,33 @@ input {
     display: flex;
     z-index: 1000;
   }
+
   .menu-icon {
     margin-right: 16px;
   }
+
   .left-items {
     display: flex;
   }
+
   .search-compact {
     display: none;
   }
+
   .btn-primary-icon.btn-text-primary.mobile {
     display: flex;
   }
+
   .account-count {
     width: 29px;
     height: 29px;
     border-radius: 14.5px;
   }
+
   .menu-icon {
     width: 32px;
     height: 32px;
+
     img {
       width: 100px;
       height: 100%;
@@ -296,5 +337,4 @@ input {
   }
 }
 
-@media screen and (max-width: $mobile) {
-}
+@media screen and (max-width: $mobile) {}

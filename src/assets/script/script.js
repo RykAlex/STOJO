@@ -1,4 +1,4 @@
-const imagemin = require("gulp-imagemin");
+
 
 document.addEventListener("DOMContentLoaded", function (event) {
   let SimpleBar = require("simplebar");
