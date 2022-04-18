@@ -1,3 +1,5 @@
+const imagemin = require("gulp-imagemin");
+
 document.addEventListener("DOMContentLoaded", function (event) {
   let SimpleBar = require("simplebar");
 
@@ -78,6 +80,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 });
+let header = document.querySelector('header');
+let headerHeight = header.getBoundingClientRect().height;
+console.log(headerHeight);
+let footer = document.querySelector('footer');
+let footerHeight = footer.getBoundingClientRect().height;
+console.log(footerHeight);
+
 
 
 // function initFooterAccordeons(accordeons) {

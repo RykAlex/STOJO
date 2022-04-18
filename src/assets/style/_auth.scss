@@ -3,12 +3,25 @@
 }
 
 
+:root {
+  --headerHeight: 88px;
+
+}
+
+:root {
+
+  --footerHeight: 72px;
+}
 
 .auth-img {
+  position: relative;
   margin-top: -24px;
-  height: calc(100vh - 160px);
+  height: calc(100vh - (var(--headerHeight) + var(--footerHeight)));
 
   img {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     object-fit: cover;
   }
