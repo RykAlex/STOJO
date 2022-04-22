@@ -21,16 +21,60 @@
   align-items: flex-start;
 }
 
-.item-img {
+.icon {
   width: 48px;
   height: 48px;
   margin-bottom: 20px;
+  background: #777C65;
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  &.icon-img1 {
+    mask-image: url(/src/assets/static/img/benefits1.svg);
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+
   }
+
+  &.icon-img2 {
+    mask-image: url(/src/assets/static/img/benefits2.svg);
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+
+  }
+
+  &.icon-img3 {
+    mask-image: url(/src/assets/static/img/benefits3.svg);
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+
+  }
+
+  &.icon-img4 {
+    mask-image: url(/src/assets/static/img/benefits4.svg);
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+
+  }
+
+  &.icon-img5 {
+    mask-image: url(/src/assets/static/img/benefits5.svg);
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+
+  }
+
+  &.icon-img6 {
+    mask-image: url(/src/assets/static/img/benefits6.svg);
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+
+  }
+
 }
 
 .item-title {

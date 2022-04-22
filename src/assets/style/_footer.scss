@@ -2,15 +2,11 @@
   display: flex;
   justify-content: space-between;
   padding-top: 53px;
-
-
-
 }
 
 .footer-menu {
   display: flex;
   flex-direction: column;
-
 }
 
 .footer-menu-item {
@@ -177,7 +173,6 @@ footer.mobile {
     display: none;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-
     border-bottom: 1px solid #f9faea;
   }
 

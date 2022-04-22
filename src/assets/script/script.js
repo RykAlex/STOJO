@@ -1,3 +1,4 @@
+const { choices } = require("yargs");
 
 
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -7,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   accordion();
   btnTextArrow();
   openLeftMenu();
+  showPassword();
 
 
   function btnIconArrow() {
@@ -79,13 +81,37 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
 
+
+  let headerHeight = document.querySelector('header').getBoundingClientRect().height;
+  console.log(headerHeight);
+  let footerHeight = document.querySelector('footer').getBoundingClientRect().height;
+  console.log(footerHeight);
+
+  let footerminiHeight = document.querySelector('footer.mobile').getBoundingClientRect().height;
+  console.log(footerminiHeight);
+
+  // function validateComments(input) {
+  //   if (input.value.length < 20) {
+  //     input.setCustomValidity("Дайте более развернутый ответ.");
+  //   }
+  //   else {
+  //     // Длина комментария отвечает требованию, 
+  //     // поэтому очищаем сообщение об ошибке
+  //     input.setCustomValidity("");
+  //   }
+  // }
+
+  function showPassword() {
+    let eye = document.querySelector('.show-password');
+    eye.addEventListener("mouseover", () => {
+      let ele = document.querySelector('#password');
+      ele.setAttribute("type", "text");
+
+    });
+  }
+
+
 });
-let header = document.querySelector('header');
-let headerHeight = header.getBoundingClientRect().height;
-console.log(headerHeight);
-let footer = document.querySelector('footer');
-let footerHeight = footer.getBoundingClientRect().height;
-console.log(footerHeight);
 
 
 

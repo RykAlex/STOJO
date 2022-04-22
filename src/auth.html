@@ -3,20 +3,44 @@
 <!-- =include ./_head.html -->
 
 <body>
-  <!-- =include ./_header.html -->
+  <!-- =include ./_headermini.html -->
   <main>
 
     <div class="auth-img">
       <img class="desk" src="/src/assets/static/img/auth.png" alt="">
-      <img class="mobile" src="/src/assets/static/img/auth-mobile.png" alt="">
+
     </div>
+    <div class='input-wrapper'>
+      <form class='auth' action="">
+        <h2>Войти</h2>
+        <a href="">Регистрация оптового покупателя</a>
+        <div class="text-input">
+          Электронная почта
+        </div>
+        <input type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder="example@mail.ru">
+        <div class="text-input">
+          Пароль
+        </div>
+        <div class="password-wrapper">
+          <input type="password" required placeholder="•••••••••••" pattern="[A-Za-z0-9]"
+            title="Пароль должен содержать заглавные, прописные буквы и цифры" minlength="8" id="password">
 
+          <div class="show-password">
+            <div class="icon7 icon-img7">
 
-
-
-
-
-
+            </div>
+          </div>
+        </div>
+        <div class="remember">
+          <label class="remember-label">
+            <input type="checkbox">
+            <span>Запомнить меня на этом компьютере</span>
+          </label>
+        </div>
+        <button class="btn-secondary-text">Войти</button>
+        <a href="">Я забыл пароль</a>
+      </form>
+    </div>
   </main>
   <!-- =include ./_footermini.html -->
 </body>
