@@ -1,6 +1,3 @@
-const { choices } = require("yargs");
-
-
 document.addEventListener("DOMContentLoaded", function (event) {
   let SimpleBar = require("simplebar");
 
@@ -104,15 +101,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
   function showPassword() {
     let eye = document.querySelector('.show-password');
     eye.addEventListener("mouseover", () => {
-      let ele = document.querySelector('#password');
-      ele.setAttribute("type", "text");
-
+      let ele1 = document.querySelector('#password');
+      ele1.setAttribute("type", "text");
+    });
+    eye.addEventListener("mouseout", () => {
+      let ele1 = document.querySelector('#password');
+      ele1.setAttribute("type", "password");
     });
   }
 
-
 });
-
 
 
 // function initFooterAccordeons(accordeons) {

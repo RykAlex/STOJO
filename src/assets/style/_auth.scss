@@ -69,9 +69,14 @@ input[type="email"] {
   border-radius: 8px;
   padding: 16px;
 
-  &:not(:required:invalid) {
+  &:valid:not(:placeholder-shown) {
+    border-color: green;
+  }
+
+  &:invalid:not(:placeholder-shown) {
     border-color: red;
   }
+
 }
 
 .password-wrapper {
@@ -126,7 +131,31 @@ input[type="password"] {
   margin-right: 17px;
   padding: 16px;
 
-  &:not(:invalid) {
+  &:valid:not(:placeholder-shown) {
+    border-color: green;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: red;
+  }
+}
+
+input[type="text"] {
+  margin-bottom: 27px;
+  width: 82%;
+  height: 56px;
+  align-self: flex-start;
+  border: 2px solid #3C3C3A;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-right: 17px;
+  padding: 16px;
+
+  &:valid:not(:placeholder-shown) {
+    border-color: green;
+  }
+
+  &:invalid:not(:placeholder-shown) {
     border-color: red;
   }
 }
@@ -237,6 +266,14 @@ input[type="password"] {
     border: 2px solid #3C3C3A;
     box-sizing: border-box;
     border-radius: 8px;
+
+    &:valid:not(:placeholder-shown) {
+      border-color: green;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: red;
+    }
   }
 
   input[type="password"] {
@@ -249,6 +286,34 @@ input[type="password"] {
     box-sizing: border-box;
     border-radius: 8px;
     margin-right: 17px;
+
+    &:valid:not(:placeholder-shown) {
+      border-color: green;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: red;
+    }
+  }
+
+  input[type="text"] {
+    display: block;
+    margin-bottom: 18px;
+    width: 82%;
+    height: 48px;
+    align-self: flex-start;
+    border: 2px solid #3C3C3A;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-right: 17px;
+
+    &:valid:not(:placeholder-shown) {
+      border-color: green;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: red;
+    }
   }
 
   .show-password {
