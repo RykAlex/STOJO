@@ -12,33 +12,37 @@
     </div>
     <div class='input-wrapper'>
       <form class='auth' action="">
-        <h2>Войти</h2>
-        <a href="">Регистрация оптового покупателя</a>
+        <h2>Введите новый пароль</h2>
         <div class="text-input">
-          Электронная почта
+          Новый пароль
         </div>
-        <input type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder="example@mail.ru">
+        <div class="password-wrapper">
+          <input type="password" required placeholder="•••••••••••" id="passwordNew"
+            pattern="^.*(?=.{8,})(?=.*\d)(?=.*[a-zA-Z])|(?=.{8,})(?=.*\d)(?=.*[!@#$%^&])|(?=.{8,})(?=.*[a-zA-Z])(?=.*[!@#$%^&])(?=\S+$).*$">
+
+          <div class="show-password-new">
+            <div class="icon7 icon-img7">
+            </div>
+          </div>
+
+        </div>
+        <div class="remember-password">
+          <span>Не менее 8 символов</span>
+        </div>
         <div class="text-input">
-          Пароль
+          Повторите новый пароль
         </div>
+
         <div class="password-wrapper">
           <input type="password" required placeholder="•••••••••••" id="password"
             pattern="^.*(?=.{8,})(?=.*\d)(?=.*[a-zA-Z])|(?=.{8,})(?=.*\d)(?=.*[!@#$%^&])|(?=.{8,})(?=.*[a-zA-Z])(?=.*[!@#$%^&])(?=\S+$).*$">
 
           <div class="show-password">
             <div class="icon7 icon-img7">
-
             </div>
           </div>
         </div>
-        <div class="remember">
-          <label class="remember-label">
-            <input type="checkbox">
-            <span>Запомнить меня на этом компьютере</span>
-          </label>
-        </div>
-        <button class="btn-secondary-text">Войти</button>
-        <a href="">Я забыл пароль</a>
+        <button class="btn-secondary-text new">Сохранить</button>
       </form>
     </div>
   </main>

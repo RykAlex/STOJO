@@ -1,0 +1,41 @@
+.remember-email {
+  display: flex;
+  justify-items: center;
+  align-self: flex-start;
+  align-items: center;
+
+  span {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: $black;
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+}
+
+.btn-secondary-text {
+  margin-top: 27px;
+  margin-bottom: 55px;
+  width: 100%;
+  color: $white;
+}
+
+input[type=email] {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: $tablet) {
+  .btn-secondary-text {
+    font-size: 12px;
+    line-height: 150%;
+  }
+
+  .remember-email span {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: $mobile) {}

@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   btnTextArrow();
   openLeftMenu();
   showPassword();
+  showPasswordNew();
 
 
   function btnIconArrow() {
@@ -92,12 +93,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
   //     input.setCustomValidity("Дайте более развернутый ответ.");
   //   }
   //   else {
-  //     // Длина комментария отвечает требованию, 
+  //     // Длина комментария отвечает требованию,
   //     // поэтому очищаем сообщение об ошибке
   //     input.setCustomValidity("");
   //   }
   // }
 
+  function showPasswordNew() {
+    let eye = document.querySelector('.show-password-new');
+    eye.addEventListener("mouseover", () => {
+
+      let ele1 = document.querySelector('#passwordNew');
+      ele1.setAttribute("type", "text");
+    });
+    eye.addEventListener("mouseout", () => {
+      let ele1 = document.querySelector('#passwordNew');
+      ele1.setAttribute("type", "password");
+    });
+  }
   function showPassword() {
     let eye = document.querySelector('.show-password');
     eye.addEventListener("mouseover", () => {
@@ -109,6 +122,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       ele1.setAttribute("type", "password");
     });
   }
+
 
 });
 

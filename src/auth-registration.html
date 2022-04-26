@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!-- =include ./_head.html -->
+
+<body>
+  <!-- =include ./_headermini.html -->
+  <main>
+
+    <div class="auth-img">
+      <img class="desk" src="/src/assets/static/img/auth.png" alt="">
+    </div>
+    <div class='input-wrapper-registration'>
+      <form class='auth' action="">
+        <h2>Регистрация оптового покупателя</h2>
+        <div class="login">Вы уже клиент компании Ecocups? <a href=""> Войдите в аккаунт</a></div>
+        <div class="all-data">
+
+          <div class="personal-data">
+            <h4>Личные данные</h4>
+            <div class="text-input">
+              ФИО*
+            </div>
+            <input class="fio" type="text" required placeholder="Иванов Иван Иванович">
+            <div class="text-input">
+              Мобильный телефон*
+            </div>
+            <input type="tel" required placeholder="+7 (000) 000-00-00">
+            <div class="text-input">
+              Электронная почта*
+            </div>
+            <input type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder="example@mail.ru">
+            <div class="text-input">
+              Новый пароль*
+            </div>
+            <div class="password-wrapper">
+              <input type="password" required placeholder="•••••••••••" id="passwordNew"
+                pattern="^.*(?=.{8,})(?=.*\d)(?=.*[a-zA-Z])|(?=.{8,})(?=.*\d)(?=.*[!@#$%^&])|(?=.{8,})(?=.*[a-zA-Z])(?=.*[!@#$%^&])(?=\S+$).*$">
+
+              <div class="show-password-new">
+                <div class="icon7 icon-img7">
+                </div>
+              </div>
+
+            </div>
+            <div class="remember-password">
+              <span>Не менее 8 символов</span>
+            </div>
+            <div class="text-input">
+              Повторите новый пароль*
+            </div>
+
+            <div class="password-wrapper">
+              <input type="password" required placeholder="•••••••••••" id="password"
+                pattern="^.*(?=.{8,})(?=.*\d)(?=.*[a-zA-Z])|(?=.{8,})(?=.*\d)(?=.*[!@#$%^&])|(?=.{8,})(?=.*[a-zA-Z])(?=.*[!@#$%^&])(?=\S+$).*$">
+
+              <div class="show-password">
+                <div class="icon7 icon-img7">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="legal-data">
+            <h4>Данные вашей организации</h4>
+            <div class="individual">
+              <label class="individual-label">
+                <input type="checkbox">
+                <span>Я физическое лицо</span>
+              </label>
+            </div>
+            <div class="text-input">
+              ИНН организации
+            </div>
+            <div class="inn-wrapper">
+              <input class="inn" type="text" placeholder="********">
+
+            </div>
+            <div class="inn-text caption">
+              <span>ИНН вы можете посмотреть в Свидетельстве о постановке на учет в налоговом органе</span>
+            </div>
+            <div class="text-input">
+              Юридическое название организации
+            </div>
+            <div class="inn-wrapper">
+              <input class="inn" type="text" placeholder="ООО «Компания» или ИП Иванов">
+
+            </div>
+            <div class="inn-text caption">
+              <span>Потребуется для выставления счета на оплату</span>
+            </div>
+            <div class="text-input">
+              Юридический адрес организации
+            </div>
+            <div class="inn-wrapper">
+              <input class="inn" type="text" placeholder="123456, Москва, Варшавское шоссе, 134">
+            </div>
+            <div class="text-select">
+              Укажите, если вы используете ЭДО
+            </div>
+            <select class="select">
+              <option class="select-text" value="s1">выбрать систему ЭДО</option>
+              <option class="select-text" value="s2">выбрать систему ЭДО</option>
+            </select>
+
+          </div>
+        </div>
+        <button class="btn-secondary-text reg">зарегистрироваться</button>
+      </form>
+    </div>
+  </main>
+  <!-- =include ./_footermini.html -->
+</body>
+
+</html>
