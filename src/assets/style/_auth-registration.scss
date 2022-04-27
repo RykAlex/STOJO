@@ -1,9 +1,9 @@
-.auth-img {
+.auth-img.reg1 {
   position: relative;
   justify-content: center;
   align-items: center;
   display: flex;
-  height: calc(100vh - (var(--headerHeight, 88px) + var(--footerHeight, 72px)));
+  height: calc(100vh - (var(--headerHeight, 88px) + var(--footerHeight, 72px)) + 154px);
 
 
 
@@ -25,7 +25,7 @@
   border-radius: 16px;
   padding-left: 60px;
   padding-right: 60px;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -209,6 +209,14 @@ select {
   padding: 18px 120px;
 }
 
+.inn {
+  background-color: $white;
+}
+
+.inn:disabled {
+  background-color: #d4d8d1;
+}
+
 @media screen and (max-width: $tablet) {
   .all-data {
     display: grid;
@@ -216,9 +224,10 @@ select {
 
   }
 
-  .auth-img {
+  .auth-img.reg1 {
     position: relative;
-    height: calc(100vh - (var(--headerHeight, 88px) + var(--footerminiHeight, 198px)));
+    height: calc(100vh - (var(--headerHeight, 88px) + var(--footerminiHeight, 198px)) + 815px);
+
   }
 
   .input-wrapper-registration {
@@ -226,11 +235,11 @@ select {
     background: white;
     width: 289px;
     min-height: 390px;
-
+    overflow: hidden;
     border-radius: 16px;
     padding-left: 15px;
     padding-right: 15px;
-    top: 33%;
+    top: 87%;
     left: 50%;
     transform: translate(-50%, -50%);
 

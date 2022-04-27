@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   openLeftMenu();
   showPassword();
   showPasswordNew();
+  ifIIndiv();
 
 
   function btnIconArrow() {
@@ -120,6 +121,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
     eye.addEventListener("mouseout", () => {
       let ele1 = document.querySelector('#password');
       ele1.setAttribute("type", "password");
+    });
+  }
+
+  function ifIIndiv() {
+    let inputChecked = document.querySelector('label.individual-label');
+    inputChecked.addEventListener('change', function () {
+      document.querySelectorAll('.inn').forEach(item => {
+        if (inputChecked.checked) {
+          item.removeAttribute('disabled');
+        } else {
+          item.setAttribute('disabled', true);
+        }
+      })
     });
   }
 
