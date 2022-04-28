@@ -20,11 +20,13 @@
             <div class="text-input">
               ФИО*
             </div>
-            <input class="fio" type="text" required placeholder="Иванов Иван Иванович">
+            <input class="fio" type="text" required placeholder="Иванов Иван Иванович"
+              pattern="([А-ЯЁ][а-яё]+[\-\s]?){3,}">
             <div class="text-input">
               Мобильный телефон*
             </div>
-            <input type="tel" required placeholder="+7 (000) 000-00-00">
+            <input type="tel" required placeholder="+7 (000) 000-00-00"
+              pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
             <div class="text-input">
               Электронная почта*
             </div>
@@ -63,7 +65,7 @@
             <h4>Данные вашей организации</h4>
             <div class="individual">
               <label class="individual-label">
-                <input type="checkbox">
+                <input class="checkbox" type="checkbox">
                 <span>Я физическое лицо</span>
               </label>
             </div>

@@ -125,13 +125,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   function ifIIndiv() {
-    let inputChecked = document.querySelector('label.individual-label');
+    let inputChecked = document.querySelector('.checkbox');
     inputChecked.addEventListener('change', function () {
       document.querySelectorAll('.inn').forEach(item => {
         if (inputChecked.checked) {
-          item.removeAttribute('disabled');
-        } else {
           item.setAttribute('disabled', true);
+        } else {
+          item.removeAttribute('disabled');
         }
       })
     });
