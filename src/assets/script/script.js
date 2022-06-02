@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   showPassword();
   showPasswordNew();
   ifIIndiv();
+  checkPassword();
 
 
   function btnIconArrow() {
@@ -136,6 +137,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
       })
     });
   }
+
+
 
 
 });

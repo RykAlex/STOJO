@@ -30,13 +30,12 @@
             <div class="text-input">
               Электронная почта*
             </div>
-            <input type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder="example@mail.ru">
+            <input type="email" required placeholder="example@mail.ru">
             <div class="text-input">
               Новый пароль*
             </div>
             <div class="password-wrapper">
-              <input type="password" required placeholder="•••••••••••" id="passwordNew"
-                pattern="^.*(?=.{8,})(?=.*\d)(?=.*[a-zA-Z])|(?=.{8,})(?=.*\d)(?=.*[!@#$%^&])|(?=.{8,})(?=.*[a-zA-Z])(?=.*[!@#$%^&])(?=\S+$).*$">
+              <input type="password" required placeholder="•••••••••••" id="passwordNew" minlength="8">
 
               <div class="show-password-new">
                 <div class="icon7 icon-img7">
@@ -52,8 +51,7 @@
             </div>
 
             <div class="password-wrapper">
-              <input type="password" required placeholder="•••••••••••" id="password"
-                pattern="^.*(?=.{8,})(?=.*\d)(?=.*[a-zA-Z])|(?=.{8,})(?=.*\d)(?=.*[!@#$%^&])|(?=.{8,})(?=.*[a-zA-Z])(?=.*[!@#$%^&])(?=\S+$).*$">
+              <input type="password" required placeholder="•••••••••••" id="password" minlength="8">
 
               <div class="show-password">
                 <div class="icon7 icon-img7">
