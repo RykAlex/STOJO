@@ -1,14 +1,15 @@
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", function () {
+
   let SimpleBar = require("simplebar");
 
   btnIconArrow();
   accordion();
   btnTextArrow();
   openLeftMenu();
-  showPassword();
-  showPasswordNew();
-  ifIIndiv();
-  checkPassword();
+  pN();
+  p();
+  indiv();
+  quantity();
 
 
   function btnIconArrow() {
@@ -101,34 +102,34 @@ document.addEventListener("DOMContentLoaded", function (event) {
   //   }
   // }
 
-  function showPasswordNew() {
-    let eye = document.querySelector('.show-password-new');
-    eye.addEventListener("mouseover", () => {
-
-      let ele1 = document.querySelector('#passwordNew');
-      ele1.setAttribute("type", "text");
-    });
-    eye.addEventListener("mouseout", () => {
-      let ele1 = document.querySelector('#passwordNew');
-      ele1.setAttribute("type", "password");
-    });
-  }
-  function showPassword() {
+  function pN() {
     let eye = document.querySelector('.show-password');
     eye.addEventListener("mouseover", () => {
-      let ele1 = document.querySelector('#password');
+
+      let ele1 = document.getElementById('passwordnew');
       ele1.setAttribute("type", "text");
     });
     eye.addEventListener("mouseout", () => {
-      let ele1 = document.querySelector('#password');
+      let ele1 = document.getElementById('passwordnew');
       ele1.setAttribute("type", "password");
     });
   }
+  function p() {
+    let eye = document.querySelector('.show-password-new');
+    eye.addEventListener("mouseover", () => {
+      let ele = document.getElementById('passwor');
+      ele.setAttribute("type", "text");
+    });
+    eye.addEventListener("mouseout", () => {
+      let ele = document.getElementById('passwor');
+      ele.setAttribute("type", "password");
+    });
+  }
 
-  function ifIIndiv() {
-    let inputChecked = document.querySelector('.checkbox');
-    inputChecked.addEventListener('change', function () {
-      document.querySelectorAll('.inn').forEach(item => {
+  function indiv() {
+    let inputChecked = document.querySelector('.chbox');
+    inputChecked.addEventListener("change", function () {
+      document.querySelectorAll('.inn').forEach(function (item) {
         if (inputChecked.checked) {
           item.setAttribute('disabled', true);
         } else {
@@ -138,6 +139,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  function quantity() {
+    let minus = document.querySelector('.icon-minus');
+    let add = document.querySelector('.icon-add');
+    let quanNumber = document.querySelector('#quant');
+    let qty = parseInt(quanNumber.value);
+    minus.addEventListener('click', function () {
+      qty = qty - 1;
+      quanNumber.value = qty;
+    })
+    add.addEventListener('click', function () {
+      qty = qty + 1;
+      quanNumber.value = qty;
+    })
+  }
 
 
 

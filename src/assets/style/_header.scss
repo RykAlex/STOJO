@@ -147,40 +147,6 @@ header {
 
 }
 
-// .search-compact {
-//   border: 2px solid $middle-green1;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   border-radius: 32px;
-//   width: 247px;
-//   height: 48px;
-
-//   margin-left: 231px;
-// }
-
-input {
-  font-family: Inter;
-
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 170%;
-  color: $dark-green;
-
-  &:focus {
-    width: 233px;
-  }
-}
-
-[type="search"] {
-  border: none;
-  outline: none;
-  margin-left: 25px;
-}
-
-.search-compact img {
-  margin-right: 10px;
-}
 
 .left-items {
   display: flex;
