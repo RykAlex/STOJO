@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function (event) {
 
   let SimpleBar = require("simplebar");
 
@@ -6,8 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   accordion();
   btnTextArrow();
   openLeftMenu();
-  pN();
-  p();
+  showPassword();
   indiv();
   quantity();
 
@@ -102,56 +101,50 @@ document.addEventListener("DOMContentLoaded", function () {
   //   }
   // }
 
-  function pN() {
-    let eye = document.querySelector('.show-password');
-    eye.addEventListener("mouseover", () => {
-
-      let ele1 = document.getElementById('passwordnew');
-      ele1.setAttribute("type", "text");
-    });
-    eye.addEventListener("mouseout", () => {
-      let ele1 = document.getElementById('passwordnew');
-      ele1.setAttribute("type", "password");
-    });
-  }
-  function p() {
-    let eye = document.querySelector('.show-password-new');
-    eye.addEventListener("mouseover", () => {
-      let ele = document.getElementById('passwor');
-      ele.setAttribute("type", "text");
-    });
-    eye.addEventListener("mouseout", () => {
-      let ele = document.getElementById('passwor');
-      ele.setAttribute("type", "password");
+  function showPassword() {
+    document.querySelectorAll('.password-wrapper').forEach(item => {
+      let iconP = item.querySelector('.show-password');
+      let inputP = item.querySelector("input[type='password']");
+      iconP.addEventListener("mouseover", () => {
+        inputP.setAttribute("type", "text");
+      });
+      iconP.addEventListener("mouseout", () => {
+        inputP.setAttribute("type", "password");
+      });
     });
   }
 
   function indiv() {
-    let inputChecked = document.querySelector('.chbox');
-    inputChecked.addEventListener("change", function () {
-      document.querySelectorAll('.inn').forEach(function (item) {
-        if (inputChecked.checked) {
-          item.setAttribute('disabled', true);
-        } else {
-          item.removeAttribute('disabled');
-        }
-      })
-    });
+    let inputChecked = document.querySelector(".individual input[type='checkbox']");
+    if (inputChecked) {
+      inputChecked.addEventListener("change", function () {
+        document.querySelectorAll('.inn').forEach(item => {
+          if (inputChecked.checked) {
+            item.setAttribute('disabled', true);
+          } else {
+            item.removeAttribute('disabled');
+          }
+        })
+      });
+    }
   }
 
   function quantity() {
     let minus = document.querySelector('.icon-minus');
     let add = document.querySelector('.icon-add');
-    let quanNumber = document.querySelector('#quant');
-    let qty = parseInt(quanNumber.value);
-    minus.addEventListener('click', function () {
-      qty = qty - 1;
-      quanNumber.value = qty;
-    })
-    add.addEventListener('click', function () {
-      qty = qty + 1;
-      quanNumber.value = qty;
-    })
+    let quanNumber = document.querySelector("input[type='number']");
+    if (minus)
+      minus.addEventListener('click', function () {
+        let qty = parseInt(quanNumber.value);
+        qty = qty - 1;
+        quanNumber.value = qty;
+      });
+    if (add)
+      add.addEventListener('click', function () {
+        let qty = parseInt(quanNumber.value);
+        qty = qty + 1;
+        quanNumber.value = qty;
+      });
   }
 
 
