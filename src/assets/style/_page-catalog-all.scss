@@ -216,6 +216,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-direction: column;
 
 }
 
@@ -365,6 +366,7 @@ section+.pca {
 .cups-stojo h2 {
   margin-right: 13px;
   margin-bottom: 0;
+  white-space: nowrap;
 }
 
 .in-stock {
@@ -423,6 +425,131 @@ input[type="number"]::-webkit-outer-spin-button {
 
 }
 
+//   h3 {
+//     color: $black;
+//     white-space: nowrap;
+//     margin-bottom: 13px;
+//   }
+// }
+
+
+.change-color.card-product .label-color {
+  width: 32px;
+  height: 32px;
+}
+
+.change-color.card-product .label-color input:before {
+  width: 28px;
+  height: 28px;
+
+}
+
+.price .quantity {
+  margin-top: 8px;
+  justify-content: flex-end;
+  margin-bottom: 21px;
+
+  h2 {
+    margin-bottom: 10px;
+  }
+}
+
+.quantity-left.item {
+  margin-right: 0;
+  align-items: flex-end;
+}
+
+.quantity-right.price {
+  border: none;
+  padding: 0;
+  justify-content: space-end;
+
+  .btn-text-primary {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .btn-primary-icon {
+    padding: 20px 30px 16px 59px;
+    border: none;
+    background: #777c65;
+    border-radius: 32px;
+    text-transform: uppercase;
+    position: relative;
+  }
+}
+
+.price .in-stock.caption {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 138%;
+  color: #777c65;
+}
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 0.7fr [\30] 1.3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  align-items: start;
+  gap: 0px 0px;
+  grid-auto-flow: row dense;
+  grid-template-areas:
+    "PHOTO TITLE PRICE"
+    "PHOTO wholesale PRICE"
+    "PHOTO COLOR PRICE";
+}
+
+.PHOTO {
+  grid-area: PHOTO;
+}
+
+.TITLE {
+  grid-area: TITLE;
+}
+
+.PRICE {
+  grid-area: PRICE;
+  justify-items: end;
+}
+
+.wholesale {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . .";
+  grid-area: wholesale;
+}
+
+.COLOR {
+  grid-area: COLOR;
+}
+
+.wrapper .photo {
+  width: 152px;
+  height: 188px;
+  background: $light-green;
+  border-radius: 16px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 @media screen and (max-width: $tablet) {
   .container-page {
     width: 100%;
@@ -438,11 +565,9 @@ input[type="number"]::-webkit-outer-spin-button {
   .tags-catalog {
     flex-wrap: wrap;
     margin-top: 16px;
-
   }
 
   .catalog-left {
-
     margin-right: 90px;
   }
 
@@ -453,7 +578,6 @@ input[type="number"]::-webkit-outer-spin-button {
   .catalog a {
     margin-right: 8px;
     margin-bottom: 8px;
-
 
     &:last-child {
       margin-right: 0;
@@ -470,9 +594,6 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 100%;
   }
 
-
-
-
   .inner span {
     font-size: 15px;
   }
@@ -485,8 +606,21 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-bottom: 38px;
   }
 
-  .wholesale-items {
-    display: none;
+  .wrapper .wholesale {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .icon-checked {
+      display: none;
+    }
+
+    .active {
+      width: 111%;
+      border-radius: 4px;
+      margin-left: -16px;
+      padding-left: 15px;
+    }
   }
 
   .quantity-left {
@@ -514,6 +648,132 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .wholesale {
+    margin-bottom: 0;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "PHOTO TITLE TITLE"
+      "wholesale wholesale wholesale"
+      "COLOR COLOR COLOR"
+      "PRICE PRICE PRICE";
+  }
+
+  .progress-bar {
+    flex-wrap: wrap;
+  }
+
+  .price-order {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+
+  .amount-order {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 170%;
+  }
+
+  .bar-item {
+    width: 140px;
+    height: 48px;
+    background: #eaece5;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  .icon-status.status-sucess.progress {
+
+    width: 16px;
+    height: 16px;
+    top: 8px;
+    left: 8px;
+
+    margin-right: 10px;
+  }
+
+  .order-text {
+
+    top: 9px;
+    left: 34px;
+
+  }
+
+  .wrapper .photo {
+    width: 65px;
+    height: 80px;
+    background: $light-green;
+    border-radius: 8px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .catalog {
+    margin-bottom: 16px;
+  }
+
+  section+.pca {
+    margin-bottom: 33px;
+  }
+
+  .cups-stojo {
+
+    margin-bottom: 18px;
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .quantity-right.price .btn-primary-icon {
+    padding: 14px 15px;
+  }
+
+  .quantity-left.item {
+    align-items: flex-start;
+  }
+
+  .price .in-stock.caption,
+  .price .in-stock.item-left,
+  .price .in-stock.copyright-right {
+    font-size: 11px;
+
+  }
+
+  .price .quantity h2,
+  .price .quantity .benefits-title,
+  .price .quantity .catalog-title,
+  .price .quantity .stojo-title {
+    margin-bottom: 5px;
+  }
+
+  .wholesale-items {
+
+    margin-right: 0;
+  }
+
+  .quantity {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  section h2,
+  section .stojo-title,
+  section .catalog-title,
+  section .benefits-title {
     margin-bottom: 0;
   }
 }
