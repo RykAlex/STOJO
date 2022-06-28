@@ -130,21 +130,31 @@ document.addEventListener('DOMContentLoaded', function (event) {
   }
 
   function quantity() {
-    let minus = document.querySelector('.icon-minus');
-    let add = document.querySelector('.icon-add');
+    let minus = document.querySelectorAll('.amount .icon-minus');
+    let add = document.querySelectorAll('.amount .icon-add');
     let quanNumber = document.querySelector("input[type='number']");
-    if (minus)
-      minus.addEventListener('click', function () {
+    if (minus.forEach(item => {
+      item.addEventListener('click', function () {
         let qty = parseInt(quanNumber.value);
-        qty = qty - 1;
-        quanNumber.value = qty;
+        if (qty === 0) {
+          qty = 0
+        }
+        else {
+          qty = qty - 1;
+          quanNumber.value = qty;
+        }
+
       });
-    if (add)
-      add.addEventListener('click', function () {
+    }));
+
+    if (add.forEach(item => {
+      item.addEventListener('click', function () {
         let qty = parseInt(quanNumber.value);
         qty = qty + 1;
         quanNumber.value = qty;
       });
+    }));
+
   }
 
 
