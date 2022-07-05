@@ -1,0 +1,115 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $black;
+  opacity: 0.9;
+  z-index: 10000;
+
+}
+
+.modal-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $white;
+  width: 520px;
+  padding: 25px;
+}
+
+.header-basket {
+  margin-bottom: 10px;
+}
+
+.basket-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.basket-title {
+  margin-right: 10px;
+}
+
+
+.icon-status.status-sucess.basket {
+  mask-image: url(/src/assets/static/img/icon-sucess.svg);
+  width: 16px;
+  height: 16px;
+  mask-position: center center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  background: #407868;
+  padding-right: 16px;
+}
+
+.icon-status.status-sucess.progress.basket {
+  position: absolute;
+  mask-image: url(/src/assets/static/img/icon-sucess.svg);
+  width: 16px;
+  height: 16px;
+  top: 16px;
+  left: 16px;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  background: $middle-green1;
+}
+
+.progress-bar-basket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar-item-basket {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: $light-green;
+  border-radius: 4px;
+}
+
+.bar-item-basket .order-text {
+  position: absolute;
+  top: 22px;
+  left: 56px;
+  color: $middle-green1;
+}
+
+
+.bar-item-basket .price-order {
+  font-family: 'Inter';
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.bar-item-basket .amount-order {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 170%;
+}
+
+.amount.amount-cups {
+  color: $middle-green1;
+}
+
+@media screen and (max-width: $tablet) {}
+
+@media screen and (max-width: $mobile) {}

@@ -357,13 +357,13 @@ section+.pca {
   color: $middle-green1;
 }
 
-.cups-stojo {
+.item-stojo {
   display: flex;
   align-items: flex-end;
   margin-bottom: 24px;
 }
 
-.cups-stojo h2 {
+.item-stojo h2 {
   margin-right: 13px;
   margin-bottom: 0;
   white-space: nowrap;
@@ -427,6 +427,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 h3 {
   color: $black;
+  white-space: nowrap;
 }
 
 
@@ -602,6 +603,11 @@ h3 {
     margin-top: 24px;
   }
 
+  h3 {
+    color: $black;
+    white-space: inherit;
+  }
+
   .tags-catalog {
     flex-wrap: wrap;
     margin-top: 16px;
@@ -748,8 +754,24 @@ h3 {
     margin-bottom: 0;
   }
 
-  .progress-bar {
+  .quantity-right.price .no {
+    margin-top: 0;
+  }
+
+  .price {
+    justify-self: center;
+
+  }
+
+  .prices {
+    margin-bottom: 10px;
+  }
+
+  .prices.subtitle,
+  .prices.about-us-text,
+  .prices.item-text .progress-bar {
     flex-wrap: wrap;
+    text-align: center;
   }
 
   .price-order {
@@ -816,7 +838,7 @@ h3 {
     margin-bottom: 33px;
   }
 
-  .cups-stojo {
+  .item-stojo {
 
     margin-bottom: 18px;
   }
