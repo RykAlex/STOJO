@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   showPassword();
   indiv();
   quantity();
+  barStatus();
 
 
   function btnIconArrow() {
@@ -157,6 +158,41 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   }
 
+  let count = 15;
+  function barStatus(count) {
+    let opt = [12, 36, 108, 252];
+    let status = [undefined, undefined, undefined, undefined];
+    opt.forEach((item, index) => {
+      if ((count > 0) && (count < item)) {
+        status[index] = "в процессе";
+      }
+      else if (count >= item) {
+        status[index] = "готов";
+      }
+      else {
+        status[index] = "пустой";
+      }
+      if (count > (opt[index - 1] || 0) && (count < opt[index])) {
+        status[index] = "в процессе";
+      }
+    });
+    let bar = document.querySelectorAll('.bar-item');
+    bar.forEach((item, index) => {
+      if (status[index] == "готов") {
+        item.classList.add('gotov');
+      }
+      else if (status[index] == "пустой") {
+        item.classList.add('pustoi');
+      }
+      else if (status[index] == "в процессе") {
+        item.classList.add('vprocese');
+      }
+      let lengthStep = opt[index] - opt[index - 1] || 0;
+      let percent = (count / lengthStep) * 100;
+      console.log(percent);
+      item.style.background = `linear-gradient(90deg,#333${percent}%,#red${percent}%)`;
+    });
+  }
 
 
 });
