@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   showPassword();
   indiv();
   quantity();
-  barStatus();
+  barStatus(20);
 
 
   function btnIconArrow() {
@@ -158,12 +158,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   }
 
-  let count = 15;
+
   function barStatus(count) {
     let opt = [12, 36, 108, 252];
     let status = [undefined, undefined, undefined, undefined];
     opt.forEach((item, index) => {
-      if ((count > 0) && (count < item)) {
+      if (count > (opt[index - 1] || 0) && (count < opt[index])) {
         status[index] = "в процессе";
       }
       else if (count >= item) {
@@ -172,9 +172,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       else {
         status[index] = "пустой";
       }
-      if (count > (opt[index - 1] || 0) && (count < opt[index])) {
-        status[index] = "в процессе";
-      }
+
     });
     let bar = document.querySelectorAll('.bar-item');
     bar.forEach((item, index) => {
@@ -186,12 +184,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
       }
       else if (status[index] == "в процессе") {
         item.classList.add('vprocese');
+        let lengthStep = opt[index] + opt[index - 1] || 0;
+        let percent = (count / lengthStep) * 100;
+        item.style.background = `linear-gradient(90deg,#F9FAEA ${percent}%,#EAECE5 ${percent}%)`;
       }
-      let lengthStep = opt[index] - opt[index - 1] || 0;
-      let percent = (count / lengthStep) * 100;
-      console.log(percent);
-      item.style.background = `linear-gradient(90deg,#333${percent}%,#red${percent}%)`;
+
     });
+
   }
 
 

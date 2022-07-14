@@ -22,8 +22,6 @@
   }
 }
 
-
-
 .amount {
   white-space: nowrap;
 }
@@ -328,6 +326,43 @@ section+.pca {
   height: 80px;
   background: $light-green;
   border-radius: 8px;
+}
+
+.gotov {
+  background: #BADCD2;
+
+  .icon-status.status-sucess {
+    background: #407868;
+  }
+
+  .price-order {
+    color: #407868;
+  }
+
+  .amount-order {
+    color: #407868;
+  }
+}
+
+.vprocese {
+  background: #F9FAEA;
+  border-radius: 8px 0px 0px 8px;
+
+  .icon-status.status-sucess {
+    background: #777C65;
+  }
+
+  .price-order {
+    color: #777C65;
+  }
+
+  .amount-order {
+    color: #777C65;
+  }
+}
+
+.pustoi {
+  background: #EAECE5;
 }
 
 .order-text {
