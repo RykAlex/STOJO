@@ -300,6 +300,7 @@ section+.pca {
   mask-size: contain;
   background: $middle-green1;
   margin-right: 16px;
+
 }
 
 .bar-text {
@@ -322,10 +323,28 @@ section+.pca {
   flex-wrap: wrap;
   position: relative;
   justify-content: center;
-  width: 237.86px;
+  flex-grow: 1;
   height: 80px;
   background: $light-green;
   border-radius: 8px;
+  margin-right: 16px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--basket {
+    height: 56px;
+    border-radius: 4px;
+    margin-right: 8px;
+
+    .order-text {
+      position: absolute;
+      top: 60px;
+      left: 2px;
+      color: #a3ac9a;
+    }
+  }
 }
 
 .gotov {
@@ -372,7 +391,6 @@ section+.pca {
   color: $middle-green1;
 }
 
-
 .price-order {
   font-family: 'Inter';
   font-weight: 800;
@@ -381,6 +399,7 @@ section+.pca {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 5px;
+
 }
 
 .amount-order {
