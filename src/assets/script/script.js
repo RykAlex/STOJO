@@ -160,35 +160,37 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 
   function barStatus(count) {
-    let opt = [12, 36, 108, 252];
-    let status = [undefined, undefined, undefined, undefined];
-    opt.forEach((item, index) => {
-      if (count > (opt[index - 1] || 0) && (count < opt[index])) {
-        status[index] = "в процессе";
-      }
-      else if (count >= item) {
-        status[index] = "готов";
-      }
-      else {
-        status[index] = "пустой";
-      }
+    document.querySelectorAll(".progress-bar").forEach(barGroup => {
+      let opt = [12, 36, 108, 252];
+      let status = [undefined, undefined, undefined, undefined];
+      opt.forEach((item, index) => {
+        if (count > (opt[index - 1] || 0) && (count < opt[index])) {
+          status[index] = "в процессе";
+        }
+        else if (count >= item) {
+          status[index] = "готов";
+        }
+        else {
+          status[index] = "пустой";
+        }
 
-    });
-    let bar = document.querySelectorAll('.bar-item');
-    bar.forEach((item, index) => {
-      if (status[index] == "готов") {
-        item.classList.add('gotov');
-      }
-      else if (status[index] == "пустой") {
-        item.classList.add('pustoi');
-      }
-      else if (status[index] == "в процессе") {
-        item.classList.add('vprocese');
-        let lengthStep = opt[index] + opt[index - 1] || 0;
-        let percent = (count / lengthStep) * 100;
-        item.style.background = `linear-gradient(90deg,#F9FAEA ${percent}%,#EAECE5 ${percent}%)`;
-      }
+      });
+      let bar = barGroup.querySelectorAll('.bar-item');
+      bar.forEach((item, index) => {
+        if (status[index] == "готов") {
+          item.classList.add('gotov');
+        }
+        else if (status[index] == "пустой") {
+          item.classList.add('pustoi');
+        }
+        else if (status[index] == "в процессе") {
+          item.classList.add('vprocese');
+          let lengthStep = opt[index] + opt[index - 1] || 0;
+          let percent = (count / lengthStep) * 100;
+          item.style.background = `linear-gradient(90deg,#F9FAEA ${percent}%,#EAECE5 ${percent}%)`;
+        }
 
+      });
     });
 
   }
