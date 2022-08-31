@@ -4,8 +4,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: $black;
-  opacity: 0.9;
+  background: #E5E5E5;
+  opacity: 1;
   z-index: 10000;
 
 }
@@ -22,7 +22,7 @@
 }
 
 .header-basket {
-  margin-bottom: 10px;
+  margin-bottom: 36px;
 }
 
 
@@ -30,7 +30,7 @@
 .item-right {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }
 
 .basket-item {
@@ -40,7 +40,149 @@
 }
 
 .basket-title {
-  margin-right: 10px;
+  margin-right: 20px;
+}
+
+.btn--basket {
+  width: 100%;
+  margin-top: 28px;
+  padding: 18px 92px;
+  background: $dark-green;
+  font-family: 'Inter';
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.basket-footer {
+  margin-top: 134px;
+  border-top: 2px solid #777C65;
+
+}
+
+.basket-footer-item {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.content--black {
+  font-weight: 800;
+  color: black;
+}
+
+.icon-basket-close {
+  position: absolute;
+
+  width: 48px;
+  height: 48px;
+  left: -70px;
+  top: 20px;
+  border-radius: 50%;
+  mask-position: center center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  background: #EAECE5;
+
+
+
+}
+
+.wrapper-basket {
+  display: grid;
+  grid-template-columns: auto 2fr 1fr;
+  grid-template-rows: 0.9fr 1.1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Photo-basket Title-basket Coast-basket"
+    "Photo-basket Amount Delete-basket";
+
+  margin-top: 33px;
+
+  border-bottom: 2px solid #F9FAEA;
+}
+
+.Photo-basket {
+  grid-area: Photo-basket;
+  background: #E5E5E5;
+  width: 100%;
+  max-width: 55px;
+  border-radius: 8px;
+  height: 70px;
+  margin-right: 25px;
+
+}
+
+h6 .Title-basket {
+  grid-area: Title-basket;
+  color: #3C3C3A;
+}
+
+.Amount {
+  grid-area: Amount;
+  width: 111px;
+  margin-bottom: 8px;
+
+}
+
+.Coast-basket {
+  grid-area: Coast-basket;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .coast-basket-item.coast-basket-item--total {
+    color: #3C3C3A;
+  }
+
+  .coast-basket-item.coast-basket-item--free {
+    font-size: 13px;
+  }
+}
+
+.Delete-basket {
+  grid-area: Delete-basket;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .icon-delete {
+    mask-image: url(/src/assets/static/img/icon-delete.svg);
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background: $middle-green1;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    margin-right: 7px;
+    z-index: 5;
+  }
+}
+
+.Amount {
+  .quantity-right {
+    padding: 9px 30px;
+  }
+
+  .quantity-right>input {
+    width: 52px;
+    height: 22px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 122%;
+  }
 }
 
 

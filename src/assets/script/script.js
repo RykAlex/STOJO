@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   showPassword();
   indiv();
   quantity();
-  barStatus(20);
+  barStatus(13);
 
 
   function btnIconArrow() {
@@ -131,31 +131,32 @@ document.addEventListener('DOMContentLoaded', function (event) {
   }
 
   function quantity() {
-    let minus = document.querySelectorAll('.amount .icon-minus');
-    let add = document.querySelectorAll('.amount .icon-add');
-    let quanNumber = document.querySelector("input[type='number']");
-    if (minus.forEach(item => {
-      item.addEventListener('click', function () {
-        let qty = parseInt(quanNumber.value);
-        if (qty === 0) {
-          qty = 0
-        }
-        else {
-          qty = qty - 1;
+    document.querySelectorAll(".quantity-right").forEach(amountGroup => {
+      let minus = amountGroup.querySelectorAll('.amount .icon-minus');
+      let add = amountGroup.querySelectorAll('.amount .icon-add');
+      let quanNumber = amountGroup.querySelector("input[type='number']");
+      if (minus.forEach(item => {
+        item.addEventListener('click', function () {
+          let qty = parseInt(quanNumber.value);
+          if (qty === 0) {
+            qty = 0
+          }
+          else {
+            qty = qty - 1;
+            quanNumber.value = qty;
+          }
+
+        });
+      }));
+
+      if (add.forEach(item => {
+        item.addEventListener('click', function () {
+          let qty = parseInt(quanNumber.value);
+          qty = qty + 1;
           quanNumber.value = qty;
-        }
-
-      });
-    }));
-
-    if (add.forEach(item => {
-      item.addEventListener('click', function () {
-        let qty = parseInt(quanNumber.value);
-        qty = qty + 1;
-        quanNumber.value = qty;
-      });
-    }));
-
+        });
+      }));
+    });
   }
 
 

@@ -6,6 +6,9 @@
           <div class="basket-title">
             <h3>Карзина</h3>
           </div>
+          <div class="icon-basket-close">
+            <img src="/src/assets/static/img/close-basket.svg" alt="">
+          </div>
           <div class="basket-amount">24 товара</div>
         </div>
         <div class="item-left">
@@ -18,36 +21,127 @@
     <div class="progress-bar">
       <div class="bar-item bar-item--basket">
         <div class="icon-status status-sucess progress"></div>
-        <div class="order-text">
+        <div class="order-text order-text--vprocese">
           <div class="price-order">Мин. заказ</div>
-          <div class="amount-order">Добавлено 12 шт</div>
+          <div class="amount-order">Добавьте 12 шт</div>
         </div>
-        <div class="order-text">
+        <div class="order-text order-text--gotov">
           <div class="price-order">Опт 1</div>
         </div>
       </div>
-      <div class="bar-item">
+      <div class="bar-item bar-item--basket">
         <div class="icon-status status-sucess progress"></div>
-        <div class="order-text">
-          <div class="price-order">Опт. цена 1</div>
-          <div class="amount-order">Добавьте 36 шт</div>
-        </div>
-
-      </div>
-      <div class="bar-item">
-        <div class="icon-status status-sucess progress"></div>
-        <div class="order-text">
+        <div class="order-text order-text--vprocese">
           <div class="price-order">Опт. цена 2</div>
+          <div class="amount-order">Добавьте 36 шт</div>
+
+        </div>
+        <div class="order-text order-text--gotov order-text--pustoi">
+          <div class="price-order">Опт 2</div>
+        </div>
+      </div>
+      <div class="bar-item bar-item--basket">
+        <div class="icon-status status-sucess progress"></div>
+        <div class="order-text order-text--vprocese">
+          <div class="price-order ">Опт. цена 3</div>
           <div class="amount-order">Добавьте 108 шт</div>
         </div>
+        <div class="order-text order-text--gotov order-text--pustoi">
+          <div class="price-order">Опт 3</div>
+        </div>
       </div>
-      <div class="bar-item">
+      <div class="bar-item bar-item--basket">
         <div class="icon-status status-sucess progress"></div>
-        <div class="order-text order-text--basket">
-          <div class="price-order">Опт. цена 3</div>
+        <div class="order-text order-text--vprocese">
+          <div class="price-order">Опт. цена 4</div>
           <div class="amount-order">Добавьте 252 шт</div>
+        </div>
+        <div class="order-text order-text--gotov order-text--pustoi">
+          <div class="price-order">Опт 4</div>
         </div>
       </div>
     </div>
+
+    <div class="wrapper-basket">
+      <div class="Photo-basket">
+        <img src="/src/assets/static/img/basket_1.png" alt="">
+      </div>
+      <h6>
+        <div class="Title-basket">Кружка STOJO, 237 мл, цвет Carnation</div>
+      </h6>
+      <div class="Amount">
+        <div class="quantity-right">
+          <button class="amount">
+            <div class="icon-minus"></div>
+          </button>
+          <input type="number" name="" value="0">
+          <button class="amount">
+            <div class="icon-add"></div>
+          </button>
+        </div>
+      </div>
+      <div class="Coast-basket">
+        <h6>
+          <div class="coast-basket-item coast-basket-item--total">19 980 ₽</div>
+        </h6>
+        <div class="coast-basket-item coast-basket-item--free">990 ₽ за шт</div>
+      </div>
+      <div class="Delete-basket">
+        <div class="icon-delete"></div>
+      </div>
+    </div>
+    <div class="wrapper-basket">
+      <div class="Photo-basket">
+        <img src="/src/assets/static/img/basket_2.png" alt="">
+      </div>
+      <h6>
+        <div class="Title-basket">Кружка STOJO, 355 мл, цвет Lagoon</div>
+      </h6>
+      <div class="Amount">
+        <div class="quantity-right">
+          <button class="amount">
+            <div class="icon-minus"></div>
+          </button>
+          <input type="number" name="" value="0">
+          <button class="amount">
+            <div class="icon-add"></div>
+          </button>
+        </div>
+      </div>
+      <div class="Coast-basket">
+        <h6>
+          <div class="coast-basket-item coast-basket-item--total">19 980 ₽</div>
+        </h6>
+        <div class="coast-basket-item coast-basket-item--free">990 ₽ за шт</div>
+      </div>
+      <div class="Delete-basket">
+        <div class="icon-delete"></div>
+      </div>
+    </div>
+
+    <div class="basket-footer">
+      <div class="basket-footer-item content">
+        <div class="item-basket-left">Доставка .....................................................................
+        </div>
+        <div class="item-basket-right">БЕСПЛАТНО</div>
+      </div>
+      <div class="basket-footer-item content">
+        <div class="item-basket-left">Сумма без скидки ..............................................................
+        </div>
+        <div class="item-basket-right">34460 ₽</div>
+      </div>
+      <div class="basket-footer-item content">
+        <div class="item-basket-left">Скидка за ОПТ 1
+          ...................................................................
+        </div>
+        <div class="item-basket-right">-2908 ₽</div>
+      </div>
+      <div class="basket-footer-item content content--black">
+        <div class="item-basket-left">Итого
+        </div>
+        <div class="item-basket-right">25 740 ₽</div>
+      </div>
+    </div>
+    <button class="btn-primary-icon btn-text-primary btn--basket">Оформить заказ и выставить счет</button>
   </div>
 </div>
