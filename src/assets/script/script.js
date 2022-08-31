@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   indiv();
   quantity();
   barStatus(13);
+  closeOpenBasket();
 
 
   function btnIconArrow() {
@@ -196,7 +197,21 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   }
 
+  function closeOpenBasket() {
+    let openBasket = document.querySelector('.btn-primary-icon.btn-text-primary');
+    let closeBasket = document.querySelector('.icon-basket-close');
+    let modal = document.querySelector('.modal-inner');
+    openBasket.addEventListener('click', function () {
 
+      modal.classList.toggle('show');
+    })
+    window.addEventListener("click", function (e) {
+
+      if (!modal.contains(e.target)) {
+        closeBasket.classList.remove("show");
+      }
+    })
+  }
 });
 
 
