@@ -198,12 +198,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
   }
 
   function closeOpenBasket() {
-    let openBasket = document.querySelector('.btn-primary-icon.btn-text-primary');
+    let openBasket = document.querySelector('.open-basket');
     let closeBasket = document.querySelector('.icon-basket-close');
-    let modal = document.querySelector('.modal-inner');
+    let modal = document.querySelector('.modal');
     openBasket.addEventListener('click', function () {
 
       modal.classList.toggle('show');
+    })
+    closeBasket.addEventListener('click', function () {
+      modal.classList.remove('show');
     })
     window.addEventListener("click", function (e) {
 
